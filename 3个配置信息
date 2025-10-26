@@ -1,0 +1,3152 @@
+【1/3】OpenWrt 配置：
+[root@OpenWrt ~]# uci show
+airconnect.config=airconnect
+airconnect.config.enabled='0'
+airconnect.config.interface='br-lan'
+airconnect.config.aircast='1'
+airconnect.config.airupnp='1'
+airplay2.@airplay2[0]=airplay2
+airplay2.@airplay2[0].enabled='0'
+airplay2.@airplay2[0].respawn='1'
+airplay2.@airplay2[0].name='AirPlay2-%v-%h'
+airplay2.@airplay2[0].interpolation='basic'
+airplay2.@airplay2[0].port='5050'
+airplay2.@airplay2[0].udp_port_base='6001'
+airplay2.@airplay2[0].udp_port_range='100'
+airplay2.@airplay2[0].sesctl_session_interruption='no'
+airplay2.@airplay2[0].sesctl_session_timeout='120'
+airplay2.@airplay2[0].alsa_mixer_control_name='PCM'
+airplay2.@airplay2[0].alsa_output_rate='auto'
+airplay2.@airplay2[0].alsa_buffer_length='6615'
+airplay2.@airplay2[0].mqtt_enabled='no'
+airplay2.@airplay2[0].mqtt_hostname='127.0.0.1'
+airplay2.@airplay2[0].mqtt_port='1883'
+airplay2.@airplay2[0].mqtt_topic='shairport'
+airplay2.@airplay2[0].mqtt_publish_raw='no'
+airplay2.@airplay2[0].mqtt_publish_parsed='no'
+airplay2.@airplay2[0].mqtt_publish_cover='no'
+airplay2.@airplay2[0].mqtt_enable_remote='no'
+appfilter.global=global
+appfilter.global.enable='0'
+appfilter.global.work_mode='0'
+appfilter.global.record_enable='1'
+appfilter.global.disable_hnat='1'
+appfilter.global.tcp_rst='1'
+appfilter.global.lan_ifname='br-lan'
+appfilter.global.auto_load_engine='1'
+appfilter.appfilter=appfilter
+appfilter.feature=feature
+appfilter.feature.update='0'
+appfilter.feature.format='v3.0'
+appfilter.time=time
+appfilter.time.deny_time='60'
+appfilter.time.start_time='00:00'
+appfilter.time.end_time='23:00'
+appfilter.time.allow_time='20'
+appfilter.time.time_mode='0'
+appfilter.time.days='1 2 3 4 5 6 0'
+appfilter.time.time='00:00-23:59'
+appfilter.user=user
+appfilter.rule=rule
+argon.@global[0]=global
+argon.@global[0].primary='#5e72e4'
+argon.@global[0].dark_primary='#483d8b'
+argon.@global[0].progressbar_font='#2e2b60'
+argon.@global[0].font_weight='normal'
+argon.@global[0].blur='10'
+argon.@global[0].blur_dark='10'
+argon.@global[0].transparency='0.2'
+argon.@global[0].transparency_dark='0.2'
+argon.@global[0].mode='normal'
+argon.@global[0].online_wallpaper='none'
+aria2.main=aria2
+aria2.main.enabled='0'
+aria2.main.user='aria2'
+aria2.main.dir='/mnt/sda1/aria2'
+aria2.main.config_dir='/var/etc/aria2'
+aria2.main.bt_enable_lpd='true'
+aria2.main.enable_dht='true'
+aria2.main.follow_torrent='true'
+aria2.main.file_allocation='none'
+aria2.main.save_session_interval='30'
+aria2.main.header=''
+aria2.main.bt_tracker=''
+aria2.main.extra_settings=''
+autoreboot.@login[0]=login
+autoreboot.@login[0].minute='0'
+autoreboot.@login[0].hour='5'
+autoreboot.@login[0].week='3'
+autoreboot.@login[0].enable='0'
+ddns.global=ddns
+ddns.global.ddns_dateformat='%F %R'
+ddns.global.ddns_loglines='250'
+ddns.global.upd_privateip='0'
+ddns.myddns_ipv4=service
+ddns.myddns_ipv4.service_name='dyndns.org'
+ddns.myddns_ipv4.lookup_host='yourhost.example.com'
+ddns.myddns_ipv4.domain='yourhost.example.com'
+ddns.myddns_ipv4.username='your_username'
+ddns.myddns_ipv4.password='your_password'
+ddns.myddns_ipv4.interface='wan'
+ddns.myddns_ipv4.ip_source='network'
+ddns.myddns_ipv4.ip_network='wan'
+ddns.myddns_ipv6=service
+ddns.myddns_ipv6.update_url='http://[USERNAME]:[PASSWORD]@your.provider.net/nic/update?hostname=[DOMAIN]&myip=[IP]'
+ddns.myddns_ipv6.lookup_host='yourhost.example.com'
+ddns.myddns_ipv6.domain='yourhost.example.com'
+ddns.myddns_ipv6.username='your_username'
+ddns.myddns_ipv6.password='your_password'
+ddns.myddns_ipv6.use_ipv6='1'
+ddns.myddns_ipv6.interface='wan6'
+ddns.myddns_ipv6.ip_source='network'
+ddns.myddns_ipv6.ip_network='wan6'
+dhcp.@dnsmasq[0]=dnsmasq
+dhcp.@dnsmasq[0].domainneeded='1'
+dhcp.@dnsmasq[0].boguspriv='1'
+dhcp.@dnsmasq[0].filterwin2k='0'
+dhcp.@dnsmasq[0].localise_queries='1'
+dhcp.@dnsmasq[0].rebind_protection='1'
+dhcp.@dnsmasq[0].rebind_localhost='1'
+dhcp.@dnsmasq[0].local='/lan/'
+dhcp.@dnsmasq[0].domain='lan'
+dhcp.@dnsmasq[0].expandhosts='1'
+dhcp.@dnsmasq[0].nonegcache='0'
+dhcp.@dnsmasq[0].cachesize='0'
+dhcp.@dnsmasq[0].authoritative='1'
+dhcp.@dnsmasq[0].readethers='1'
+dhcp.@dnsmasq[0].leasefile='/tmp/dhcp.leases'
+dhcp.@dnsmasq[0].nonwildcard='1'
+dhcp.@dnsmasq[0].localservice='1'
+dhcp.@dnsmasq[0].ednspacket_max='1232'
+dhcp.@dnsmasq[0].filter_aaaa='0'
+dhcp.@dnsmasq[0].filter_a='0'
+dhcp.@dnsmasq[0].localuse='1'
+dhcp.@dnsmasq[0].server='127.0.0.1#7874'
+dhcp.@dnsmasq[0].noresolv='1'
+dhcp.lan=dhcp
+dhcp.lan.interface='lan'
+dhcp.lan.start='100'
+dhcp.lan.limit='150'
+dhcp.lan.leasetime='12h'
+dhcp.lan.dhcpv4='server'
+dhcp.lan.ignore='1'
+dhcp.lan.dynamicdhcp='0'
+dhcp.wan=dhcp
+dhcp.wan.interface='wan'
+dhcp.wan.ignore='1'
+dhcp.odhcpd=odhcpd
+dhcp.odhcpd.maindhcp='0'
+dhcp.odhcpd.leasefile='/tmp/hosts/odhcpd'
+dhcp.odhcpd.leasetrigger='/usr/sbin/odhcpd-update'
+dhcp.odhcpd.loglevel='4'
+dockerd.globals=globals
+dockerd.globals.data_root='/opt/docker/'
+dockerd.globals.log_level='warn'
+dockerd.globals.iptables='1'
+dockerd.globals.buildkit='0'
+dockerd.globals.experimental='0'
+dockerd.globals.registry_mirrors='https://docker.m.daocloud.io'
+dockerd.proxies=proxies
+dockerd.firewall=firewall
+dockerd.firewall.device='docker0'
+dropbear.main=dropbear
+dropbear.main.enable='1'
+dropbear.main.PasswordAuth='on'
+dropbear.main.RootPasswordAuth='on'
+dropbear.main.Port='22'
+eqos.config=eqos
+eqos.config.enabled='0'
+eqos.config.download='100'
+eqos.config.upload='20'
+etherwake.setup=etherwake
+etherwake.setup.pathes='/usr/bin/etherwake /usr/bin/ether-wake'
+etherwake.setup.sudo='off'
+etherwake.setup.broadcast='off'
+etherwake.@target[0]=target
+etherwake.@target[0].name='example'
+etherwake.@target[0].mac='11:22:33:44:55:66'
+etherwake.@target[0].password='AABBCCDDEEFF'
+etherwake.@target[0].wakeonboot='off'
+firewall.@defaults[0]=defaults
+firewall.@defaults[0].syn_flood='1'
+firewall.@defaults[0].input='ACCEPT'
+firewall.@defaults[0].output='ACCEPT'
+firewall.@defaults[0].forward='REJECT'
+firewall.@defaults[0].fullcone='1'
+firewall.@defaults[0].brcmfullcone='0'
+firewall.@defaults[0].flow_offloading='1'
+firewall.@zone[0]=zone
+firewall.@zone[0].name='lan'
+firewall.@zone[0].network='lan'
+firewall.@zone[0].input='ACCEPT'
+firewall.@zone[0].output='ACCEPT'
+firewall.@zone[0].forward='ACCEPT'
+firewall.@zone[1]=zone
+firewall.@zone[1].name='wan'
+firewall.@zone[1].network='wan' 'wan6'
+firewall.@zone[1].input='ACCEPT'
+firewall.@zone[1].output='ACCEPT'
+firewall.@zone[1].forward='REJECT'
+firewall.@zone[1].fullcone4='1'
+firewall.@zone[1].fullcone6='1'
+firewall.@zone[1].masq='1'
+firewall.@zone[1].mtu_fix='1'
+firewall.@forwarding[0]=forwarding
+firewall.@forwarding[0].src='lan'
+firewall.@forwarding[0].dest='wan'
+firewall.@rule[0]=rule
+firewall.@rule[0].name='Allow-DHCP-Renew'
+firewall.@rule[0].src='wan'
+firewall.@rule[0].proto='udp'
+firewall.@rule[0].dest_port='68'
+firewall.@rule[0].target='ACCEPT'
+firewall.@rule[0].family='ipv4'
+firewall.@rule[1]=rule
+firewall.@rule[1].name='Allow-Ping'
+firewall.@rule[1].src='wan'
+firewall.@rule[1].proto='icmp'
+firewall.@rule[1].icmp_type='echo-request'
+firewall.@rule[1].family='ipv4'
+firewall.@rule[1].target='ACCEPT'
+firewall.@rule[2]=rule
+firewall.@rule[2].name='Allow-IGMP'
+firewall.@rule[2].src='wan'
+firewall.@rule[2].proto='igmp'
+firewall.@rule[2].family='ipv4'
+firewall.@rule[2].target='ACCEPT'
+firewall.@rule[3]=rule
+firewall.@rule[3].name='Allow-DHCPv6'
+firewall.@rule[3].src='wan'
+firewall.@rule[3].proto='udp'
+firewall.@rule[3].dest_port='546'
+firewall.@rule[3].family='ipv6'
+firewall.@rule[3].target='ACCEPT'
+firewall.@rule[4]=rule
+firewall.@rule[4].name='Allow-MLD'
+firewall.@rule[4].src='wan'
+firewall.@rule[4].proto='icmp'
+firewall.@rule[4].src_ip='fe80::/10'
+firewall.@rule[4].icmp_type='130/0' '131/0' '132/0' '143/0'
+firewall.@rule[4].family='ipv6'
+firewall.@rule[4].target='ACCEPT'
+firewall.@rule[5]=rule
+firewall.@rule[5].name='Allow-ICMPv6-Input'
+firewall.@rule[5].src='wan'
+firewall.@rule[5].proto='icmp'
+firewall.@rule[5].icmp_type='echo-request' 'echo-reply' 'destination-unreachable' 'packet-too-big' 'time-exceeded' 'bad-header' 'unknown-header-type' 'router-solicitation' 'neighbour-solicitation' 'router-advertisement' 'neighbour-advertisement'
+firewall.@rule[5].limit='1000/sec'
+firewall.@rule[5].family='ipv6'
+firewall.@rule[5].target='ACCEPT'
+firewall.@rule[6]=rule
+firewall.@rule[6].name='Allow-ICMPv6-Forward'
+firewall.@rule[6].src='wan'
+firewall.@rule[6].dest='*'
+firewall.@rule[6].proto='icmp'
+firewall.@rule[6].icmp_type='echo-request' 'echo-reply' 'destination-unreachable' 'packet-too-big' 'time-exceeded' 'bad-header' 'unknown-header-type'
+firewall.@rule[6].limit='1000/sec'
+firewall.@rule[6].family='ipv6'
+firewall.@rule[6].target='ACCEPT'
+firewall.@rule[7]=rule
+firewall.@rule[7].name='Allow-IPSec-ESP'
+firewall.@rule[7].src='wan'
+firewall.@rule[7].dest='lan'
+firewall.@rule[7].proto='esp'
+firewall.@rule[7].target='ACCEPT'
+firewall.@rule[8]=rule
+firewall.@rule[8].name='Allow-ISAKMP'
+firewall.@rule[8].src='wan'
+firewall.@rule[8].dest='lan'
+firewall.@rule[8].dest_port='500'
+firewall.@rule[8].proto='udp'
+firewall.@rule[8].target='ACCEPT'
+firewall.homeproxy_forward=include
+firewall.homeproxy_forward.type='nftables'
+firewall.homeproxy_forward.path='/var/run/homeproxy/fw4_forward.nft'
+firewall.homeproxy_forward.position='chain-pre'
+firewall.homeproxy_forward.chain='forward'
+firewall.homeproxy_input=include
+firewall.homeproxy_input.type='nftables'
+firewall.homeproxy_input.path='/var/run/homeproxy/fw4_input.nft'
+firewall.homeproxy_input.position='chain-pre'
+firewall.homeproxy_input.chain='input'
+firewall.homeproxy_post=include
+firewall.homeproxy_post.type='nftables'
+firewall.homeproxy_post.path='/var/run/homeproxy/fw4_post.nft'
+firewall.homeproxy_post.position='table-post'
+firewall.passwall=include
+firewall.passwall.type='script'
+firewall.passwall.path='/var/etc/passwall.include'
+firewall.passwall.reload='1'
+firewall.passwall_server=include
+firewall.passwall_server.type='script'
+firewall.passwall_server.path='/var/etc/passwall_server.include'
+firewall.passwall_server.reload='1'
+firewall.docker=zone
+firewall.docker.input='ACCEPT'
+firewall.docker.output='ACCEPT'
+firewall.docker.forward='ACCEPT'
+firewall.docker.name='docker'
+firewall.docker.network='docker'
+firewall.dockerd=forwarding
+firewall.dockerd.src='docker'
+firewall.dockerd.dest='wan'
+firewall.openclash=include
+firewall.openclash.type='script'
+firewall.openclash.path='/var/etc/openclash.include'
+frpc.@init[0]=init
+frpc.@init[0].user='frpc'
+frpc.@init[0].group='frpc'
+frpc.@init[0].respawn='1'
+frpc.common=conf
+frpc.common.server_addr='127.0.0.1'
+frpc.common.server_port='7000'
+frpc.ssh=conf
+frpc.ssh.type='tcp'
+frpc.ssh.local_ip='127.0.0.1'
+frpc.ssh.local_port='22'
+frpc.ssh.remote_port='6000'
+frpc.ssh.name='ssh'
+fstab.@global[0]=global
+fstab.@global[0].anon_swap='0'
+fstab.@global[0].anon_mount='0'
+fstab.@global[0].auto_swap='1'
+fstab.@global[0].auto_mount='1'
+fstab.@global[0].delay_root='5'
+fstab.@global[0].check_fs='0'
+fstab.@mount[0]=mount
+fstab.@mount[0].target='/boot'
+fstab.@mount[0].uuid='1234-ABCD'
+fstab.@mount[0].enabled='0'
+fstab.@mount[1]=mount
+fstab.@mount[1].target='/rom'
+fstab.@mount[1].uuid='4d251049-27813a23-1c42ab9f-dbe9c35c'
+fstab.@mount[1].enabled='0'
+fstab.@mount[2]=mount
+fstab.@mount[2].target='/overlay'
+fstab.@mount[2].uuid='fffb774b-a0c2-4d49-8207-9dd0504b9e11'
+fstab.@mount[2].enabled='0'
+homeproxy.infra=homeproxy
+homeproxy.infra.__warning='DO NOT EDIT THIS SECTION, OR YOU ARE ON YOUR OWN!'
+homeproxy.infra.common_port='22,53,80,143,443,465,587,853,873,993,995,5222,8080,8443,9418'
+homeproxy.infra.mixed_port='5330'
+homeproxy.infra.redirect_port='5331'
+homeproxy.infra.tproxy_port='5332'
+homeproxy.infra.dns_port='5333'
+homeproxy.infra.ntp_server='time.apple.com'
+homeproxy.infra.sniff_override='1'
+homeproxy.infra.tun_name='singtun0'
+homeproxy.infra.tun_addr4='172.19.0.1/30'
+homeproxy.infra.tun_addr6='fdfe:dcba:9876::1/126'
+homeproxy.infra.tun_mtu='9000'
+homeproxy.infra.table_mark='100'
+homeproxy.infra.self_mark='100'
+homeproxy.infra.tproxy_mark='101'
+homeproxy.infra.tun_mark='102'
+homeproxy.migration=homeproxy
+homeproxy.migration.crontab='1'
+homeproxy.config=homeproxy
+homeproxy.config.main_node='nil'
+homeproxy.config.main_udp_node='same'
+homeproxy.config.dns_server='8.8.8.8'
+homeproxy.config.china_dns_server='223.5.5.5'
+homeproxy.config.routing_mode='bypass_mainland_china'
+homeproxy.config.routing_port='common'
+homeproxy.config.proxy_mode='redirect_tproxy'
+homeproxy.config.ipv6_support='1'
+homeproxy.config.log_level='warn'
+homeproxy.control=homeproxy
+homeproxy.control.lan_proxy_mode='disabled'
+homeproxy.control.wan_proxy_ipv4_ips='91.105.192.0/23' '91.108.4.0/22' '91.108.8.0/22' '91.108.16.0/22' '91.108.12.0/22' '91.108.20.0/22' '91.108.56.0/22' '149.154.160.0/20' '185.76.151.0/24' '203.208.50.66/32'
+homeproxy.control.wan_proxy_ipv6_ips='2001:67c:4e8::/48' '2001:b28:f23c::/48' '2001:b28:f23d::/48' '2001:b28:f23f::/48' '2a0a:f280::/32'
+homeproxy.routing=homeproxy
+homeproxy.routing.sniff_override='1'
+homeproxy.routing.default_outbound='direct-out'
+homeproxy.routing.default_outbound_dns='default-dns'
+homeproxy.dns=homeproxy
+homeproxy.dns.dns_strategy='prefer_ipv4'
+homeproxy.dns.default_server='local-dns'
+homeproxy.dns.disable_cache='0'
+homeproxy.dns.disable_cache_expire='0'
+homeproxy.subscription=homeproxy
+homeproxy.subscription.auto_update='0'
+homeproxy.subscription.allow_insecure='0'
+homeproxy.subscription.packet_encoding='xudp'
+homeproxy.subscription.update_via_proxy='0'
+homeproxy.subscription.filter_nodes='blacklist'
+homeproxy.subscription.filter_keywords='重置|到期|过期|剩余|套餐' 'Expiration|Remaining'
+homeproxy.server=homeproxy
+homeproxy.server.enabled='0'
+homeproxy.server.log_level='warn'
+luci.main=core
+luci.main.lang='auto'
+luci.main.mediaurlbase='/luci-static/argon'
+luci.main.resourcebase='/luci-static/resources'
+luci.main.ubuspath='/ubus/'
+luci.main.pollinterval='3'
+luci.flash_keep=extern
+luci.flash_keep.uci='/etc/config/'
+luci.flash_keep.dropbear='/etc/dropbear/'
+luci.flash_keep.openvpn='/etc/openvpn/'
+luci.flash_keep.passwd='/etc/passwd'
+luci.flash_keep.opkg='/etc/opkg.conf'
+luci.flash_keep.firewall='/etc/firewall.user'
+luci.flash_keep.uploads='/lib/uci/upload/'
+luci.languages=internal
+luci.languages.zh_cn='简体中文 (Chinese Simplified)'
+luci.sauth=internal
+luci.sauth.sessionpath='/tmp/luci-sessions'
+luci.sauth.sessiontime='3600'
+luci.ccache=internal
+luci.ccache.enable='1'
+luci.themes=internal
+luci.themes.Argon='/luci-static/argon'
+luci.themes.Bootstrap='/luci-static/bootstrap'
+luci.themes.BootstrapDark='/luci-static/bootstrap-dark'
+luci.themes.BootstrapLight='/luci-static/bootstrap-light'
+luci.apply=internal
+luci.apply.rollback='90'
+luci.apply.holdoff='4'
+luci.apply.timeout='5'
+luci.apply.display='1.5'
+luci.diag=internal
+luci.diag.dns='www.qq.com'
+luci.diag.ping='www.qq.com'
+luci.diag.route='www.qq.com'
+mentohust.config=mentohust
+mentohust.config.enable='0'
+microsocks.config=microsocks
+microsocks.config.enabled='0'
+microsocks.config.listenip='127.0.0.1'
+microsocks.config.port='1080'
+microsocks.config.auth_once='0'
+microsocks.config.quiet='1'
+mosdns.config=mosdns
+mosdns.config.enabled='0'
+mosdns.config.listen_port='5335'
+mosdns.config.geo_auto_update='0'
+mosdns.config.geo_update_week_time='*'
+mosdns.config.geo_update_day_time='2'
+mosdns.config.configfile='/var/etc/mosdns.json'
+mosdns.config.log_level='info'
+mosdns.config.log_file='/var/log/mosdns.log'
+mosdns.config.cache='1'
+mosdns.config.concurrent='2'
+mosdns.config.idle_timeout='30'
+mosdns.config.minimal_ttl='0'
+mosdns.config.maximum_ttl='0'
+mosdns.config.enable_pipeline='1'
+mosdns.config.insecure_skip_verify='0'
+mosdns.config.dns_leak='0'
+mosdns.config.cloudflare='0'
+mosdns.config.listen_port_api='9091'
+mosdns.config.bootstrap_dns='119.29.29.29'
+mosdns.config.remote_dns='tls://8.8.8.8'
+mosdns.config.redirect='1'
+mosdns.config.prefer_ipv4='1'
+mosdns.config.enable_ecs_remote='0'
+mosdns.config.cache_size='8000'
+mosdns.config.lazy_cache_ttl='86400'
+mosdns.config.dump_file='0'
+mosdns.config.reject_type65='1'
+naiveproxy.config=naiveproxy
+naiveproxy.config.enable='0'
+natmap.@natmap[0]=natmap
+natmap.@natmap[0].enable='0'
+natmap.@natmap[0].udp_mode='1'
+natmap.@natmap[0].stun_server='stunserver.stunprotocol.org'
+natmap.@natmap[0].http_server='example.com'
+natmap.@natmap[0].port='8080'
+natmap.@natmap[0].log_stdout='1'
+natmap.@natmap[0].log_stderr='1'
+netspeedtest.config=netspeedtest
+network.loopback=interface
+network.loopback.device='lo'
+network.loopback.proto='static'
+network.loopback.ipaddr='127.0.0.1'
+network.loopback.netmask='255.0.0.0'
+network.globals=globals
+network.globals.ula_prefix='fd17:f502:e1ac::/48'
+network.globals.packet_steering='1'
+network.globals.steering_flows='128'
+network.@device[0]=device
+network.@device[0].name='br-lan'
+network.@device[0].type='bridge'
+network.@device[0].ports='eth0'
+network.lan=interface
+network.lan.device='br-lan'
+network.lan.proto='static'
+network.lan.ipaddr='192.168.0.200'
+network.lan.netmask='255.255.255.0'
+network.lan.ip6assign='60'
+network.lan.gateway='192.168.0.1'
+network.lan.dns='192.168.0.1'
+network.docker=interface
+network.docker.device='docker0'
+network.docker.proto='none'
+network.docker.auto='0'
+network.@device[1]=device
+network.@device[1].type='bridge'
+network.@device[1].name='docker0'
+nginx.global=main
+nginx.global.uci_enable='true'
+nginx._lan=server
+nginx._lan.server_name='_lan'
+nginx._lan.listen='80 default_server' '[::]:80 default_server'
+nginx._lan.include='conf.d/*.locations'
+nginx._lan.access_log='off; # logd openwrt'
+nlbwmon.@nlbwmon[0]=nlbwmon
+nlbwmon.@nlbwmon[0].netlink_buffer_size='524288'
+nlbwmon.@nlbwmon[0].commit_interval='24h'
+nlbwmon.@nlbwmon[0].refresh_interval='30s'
+nlbwmon.@nlbwmon[0].database_directory='/var/lib/nlbwmon'
+nlbwmon.@nlbwmon[0].database_generations='10'
+nlbwmon.@nlbwmon[0].database_interval='1'
+nlbwmon.@nlbwmon[0].database_limit='10000'
+nlbwmon.@nlbwmon[0].protocol_database='/usr/share/nlbwmon/protocols'
+nlbwmon.@nlbwmon[0].local_network='192.168.0.0/16' '172.16.0.0/12' '10.0.0.0/8' 'lan'
+openclash.config=openclash
+openclash.config.proxy_port='7892'
+openclash.config.tproxy_port='7895'
+openclash.config.mixed_port='7893'
+openclash.config.socks_port='7891'
+openclash.config.http_port='7890'
+openclash.config.dns_port='7874'
+openclash.config.enable='1'
+openclash.config.update='0'
+openclash.config.en_mode='fake-ip-tun'
+openclash.config.auto_update='0'
+openclash.config.auto_update_time='0'
+openclash.config.cn_port='9090'
+openclash.config.dashboard_forward_ssl='0'
+openclash.config.rule_source='0'
+openclash.config.enable_custom_dns='1'
+openclash.config.ipv6_enable='1'
+openclash.config.ipv6_dns='1'
+openclash.config.enable_custom_clash_rules='0'
+openclash.config.other_rule_auto_update='1'
+openclash.config.core_version='linux-amd64-v2'
+openclash.config.enable_redirect_dns='1'
+openclash.config.servers_if_update='0'
+openclash.config.disable_masq_cache='1'
+openclash.config.servers_update='0'
+openclash.config.log_level='0'
+openclash.config.proxy_mode='rule'
+openclash.config.intranet_allowed='0'
+openclash.config.disable_udp_quic='1'
+openclash.config.operation_mode='fake-ip'
+openclash.config.enable_rule_proxy='0'
+openclash.config.redirect_dns='1'
+openclash.config.cachesize_dns='1'
+openclash.config.filter_aaaa_dns='1'
+openclash.config.small_flash_memory='0'
+openclash.config.interface_name='0'
+openclash.config.log_size='1024'
+openclash.config.tolerance='50'
+openclash.config.store_fakeip='1'
+openclash.config.custom_fallback_filter='0'
+openclash.config.custom_fakeip_filter='0'
+openclash.config.custom_host='0'
+openclash.config.custom_name_policy='0'
+openclash.config.append_wan_dns='1'
+openclash.config.stream_auto_select='0'
+openclash.config.bypass_gateway_compatible='0'
+openclash.config.github_address_mod='0'
+openclash.config.urltest_address_mod='0'
+openclash.config.urltest_interval_mod='180'
+openclash.config.delay_start='0'
+openclash.config.router_self_proxy='1'
+openclash.config.release_branch='dev'
+openclash.config.smart_enable='0'
+openclash.config.dashboard_type='Official'
+openclash.config.yacd_type='Meta'
+openclash.config.append_default_dns='0'
+openclash.config.enable_respect_rules='0'
+openclash.config.chnr_custom_url='https://ispip.clang.cn/all_cn.txt'
+openclash.config.chnr6_custom_url='https://ispip.clang.cn/all_cn_ipv6.txt'
+openclash.config.dashboard_password='123456'
+openclash.config.default_resolvfile='/tmp/resolv.conf.d/resolv.conf.auto'
+openclash.config.config_path='/etc/openclash/config/clash-fallback.yaml'
+openclash.config.core_type='Meta'
+openclash.config.dnsmasq_resolvfile='/tmp/resolv.conf.d/resolv.conf.auto'
+openclash.config.disable_quic_go_gso='0'
+openclash.config.enable_custom_domain_dns_server='0'
+openclash.config.skip_proxy_address='1'
+openclash.config.china_ip_route='1'
+openclash.config.lan_interface_name='0'
+openclash.config.geo_auto_update='1'
+openclash.config.geoip_auto_update='1'
+openclash.config.geosite_auto_update='1'
+openclash.config.geoasn_auto_update='1'
+openclash.config.chnr_auto_update='1'
+openclash.config.chnr_update_week_time='*'
+openclash.config.chnr_update_day_time='3'
+openclash.config.auto_restart='0'
+openclash.config.auto_restart_week_time='1'
+openclash.config.auto_restart_day_time='0'
+openclash.config.dler_email='root'
+openclash.config.dler_passwd='10050921'
+openclash.config.stack_type='mixed'
+openclash.config.geo_update_week_time='*'
+openclash.config.geo_update_day_time='3'
+openclash.config.geo_custom_url='https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/lite/Country.mmdb'
+openclash.config.geosite_update_week_time='*'
+openclash.config.geosite_update_day_time='3'
+openclash.config.geosite_custom_url='https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat'
+openclash.config.fakeip_range='198.18.0.1/16'
+openclash.config.find_process_mode='0'
+openclash.config.global_client_fingerprint='0'
+openclash.config.geodata_loader='0'
+openclash.config.enable_geoip_dat='0'
+openclash.config.enable_meta_sniffer='1'
+openclash.config.enable_meta_sniffer_pure_ip='1'
+openclash.config.enable_meta_sniffer_custom='0'
+openclash.config.auto_smart_switch='0'
+openclash.config.smart_collect='0'
+openclash.config.lgbm_auto_update='0'
+openclash.config.other_rule_update_week_time='*'
+openclash.config.other_rule_update_day_time='3'
+openclash.config.restart='0'
+openclash.config.enable_tcp_concurrent='1'
+openclash.config.enable_unified_delay='1'
+openclash.config.smart_enable_lgbm='0'
+openclash.config.geoip_update_week_time='*'
+openclash.config.geoip_update_day_time='3'
+openclash.config.geoip_custom_url='https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat'
+openclash.config.geoasn_update_week_time='*'
+openclash.config.geoasn_update_day_time='3'
+openclash.config.geoasn_custom_url='https://testingcf.jsdelivr.net/gh/xishang0128/geoip@release/GeoLite2-ASN.mmdb'
+openclash.config.ipv6_mode='2'
+openclash.config.china_ip6_route='1'
+openclash.config.dnsmasq_cachesize='1000'
+openclash.config.dnsmasq_filter_aaaa='0'
+openclash.@dns_servers[0]=dns_servers
+openclash.@dns_servers[0].type='udp'
+openclash.@dns_servers[0].ip='114.114.114.114'
+openclash.@dns_servers[0].enabled='0'
+openclash.@dns_servers[0].group='default'
+openclash.@dns_servers[0].disable_ipv6='0'
+openclash.@dns_servers[1]=dns_servers
+openclash.@dns_servers[1].type='udp'
+openclash.@dns_servers[1].ip='119.29.29.29'
+openclash.@dns_servers[1].enabled='0'
+openclash.@dns_servers[1].group='default'
+openclash.@dns_servers[1].disable_ipv6='0'
+openclash.@dns_servers[2]=dns_servers
+openclash.@dns_servers[2].group='nameserver'
+openclash.@dns_servers[2].type='udp'
+openclash.@dns_servers[2].ip='114.114.114.114'
+openclash.@dns_servers[2].enabled='0'
+openclash.@dns_servers[2].disable_ipv6='0'
+openclash.@dns_servers[3]=dns_servers
+openclash.@dns_servers[3].type='udp'
+openclash.@dns_servers[3].ip='223.5.5.5'
+openclash.@dns_servers[3].enabled='0'
+openclash.@dns_servers[3].group='default'
+openclash.@dns_servers[3].disable_ipv6='0'
+openclash.@dns_servers[4]=dns_servers
+openclash.@dns_servers[4].group='nameserver'
+openclash.@dns_servers[4].type='udp'
+openclash.@dns_servers[4].ip='119.29.29.29'
+openclash.@dns_servers[4].enabled='0'
+openclash.@dns_servers[4].disable_ipv6='0'
+openclash.@dns_servers[5]=dns_servers
+openclash.@dns_servers[5].group='nameserver'
+openclash.@dns_servers[5].type='udp'
+openclash.@dns_servers[5].ip='119.28.28.28'
+openclash.@dns_servers[5].enabled='1'
+openclash.@dns_servers[5].disable_ipv6='0'
+openclash.@dns_servers[6]=dns_servers
+openclash.@dns_servers[6].group='nameserver'
+openclash.@dns_servers[6].type='udp'
+openclash.@dns_servers[6].ip='223.5.5.5'
+openclash.@dns_servers[6].enabled='1'
+openclash.@dns_servers[6].disable_ipv6='0'
+openclash.@dns_servers[7]=dns_servers
+openclash.@dns_servers[7].type='tcp'
+openclash.@dns_servers[7].ip='192.168.3.5'
+openclash.@dns_servers[7].group='nameserver'
+openclash.@dns_servers[7].enabled='0'
+openclash.@dns_servers[7].disable_ipv6='0'
+openclash.@dns_servers[7].port='54'
+openclash.@dns_servers[8]=dns_servers
+openclash.@dns_servers[8].type='https'
+openclash.@dns_servers[8].ip='dns.alidns.com/dns-query'
+openclash.@dns_servers[8].group='nameserver'
+openclash.@dns_servers[8].enabled='0'
+openclash.@dns_servers[8].disable_ipv6='0'
+openclash.@dns_servers[9]=dns_servers
+openclash.@dns_servers[9].enabled='1'
+openclash.@dns_servers[9].group='fallback'
+openclash.@dns_servers[9].ip='9.9.9.9'
+openclash.@dns_servers[9].type='udp'
+openclash.@dns_servers[9].disable_ipv6='0'
+openclash.@dns_servers[10]=dns_servers
+openclash.@dns_servers[10].enabled='0'
+openclash.@dns_servers[10].group='fallback'
+openclash.@dns_servers[10].ip='149.112.112.112'
+openclash.@dns_servers[10].type='udp'
+openclash.@dns_servers[10].disable_ipv6='0'
+openclash.@dns_servers[11]=dns_servers
+openclash.@dns_servers[11].enabled='0'
+openclash.@dns_servers[11].group='fallback'
+openclash.@dns_servers[11].ip='2620:fe::fe'
+openclash.@dns_servers[11].type='udp'
+openclash.@dns_servers[11].disable_ipv6='0'
+openclash.@dns_servers[12]=dns_servers
+openclash.@dns_servers[12].enabled='0'
+openclash.@dns_servers[12].group='fallback'
+openclash.@dns_servers[12].ip='2620:fe::9'
+openclash.@dns_servers[12].type='udp'
+openclash.@dns_servers[12].disable_ipv6='0'
+openclash.@dns_servers[13]=dns_servers
+openclash.@dns_servers[13].enabled='1'
+openclash.@dns_servers[13].group='fallback'
+openclash.@dns_servers[13].ip='8.8.8.8'
+openclash.@dns_servers[13].type='udp'
+openclash.@dns_servers[13].disable_ipv6='0'
+openclash.@dns_servers[14]=dns_servers
+openclash.@dns_servers[14].enabled='0'
+openclash.@dns_servers[14].group='fallback'
+openclash.@dns_servers[14].ip='8.8.4.4'
+openclash.@dns_servers[14].type='udp'
+openclash.@dns_servers[14].disable_ipv6='0'
+openclash.@dns_servers[15]=dns_servers
+openclash.@dns_servers[15].enabled='0'
+openclash.@dns_servers[15].group='fallback'
+openclash.@dns_servers[15].ip='2001:4860:4860::8888'
+openclash.@dns_servers[15].type='udp'
+openclash.@dns_servers[15].disable_ipv6='0'
+openclash.@dns_servers[16]=dns_servers
+openclash.@dns_servers[16].enabled='0'
+openclash.@dns_servers[16].group='fallback'
+openclash.@dns_servers[16].ip='2001:4860:4860::8844'
+openclash.@dns_servers[16].type='udp'
+openclash.@dns_servers[16].disable_ipv6='0'
+openclash.@dns_servers[17]=dns_servers
+openclash.@dns_servers[17].enabled='0'
+openclash.@dns_servers[17].group='fallback'
+openclash.@dns_servers[17].ip='2001:da8::666'
+openclash.@dns_servers[17].type='udp'
+openclash.@dns_servers[17].disable_ipv6='0'
+openclash.@dns_servers[18]=dns_servers
+openclash.@dns_servers[18].enabled='0'
+openclash.@dns_servers[18].group='fallback'
+openclash.@dns_servers[18].ip='dns.quad9.net'
+openclash.@dns_servers[18].type='tls'
+openclash.@dns_servers[18].disable_ipv6='0'
+openclash.@dns_servers[19]=dns_servers
+openclash.@dns_servers[19].enabled='0'
+openclash.@dns_servers[19].group='fallback'
+openclash.@dns_servers[19].ip='dns.google'
+openclash.@dns_servers[19].type='tls'
+openclash.@dns_servers[19].disable_ipv6='0'
+openclash.@dns_servers[20]=dns_servers
+openclash.@dns_servers[20].enabled='1'
+openclash.@dns_servers[20].group='fallback'
+openclash.@dns_servers[20].ip='1.1.1.1'
+openclash.@dns_servers[20].type='tls'
+openclash.@dns_servers[20].disable_ipv6='0'
+openclash.@dns_servers[21]=dns_servers
+openclash.@dns_servers[21].enabled='0'
+openclash.@dns_servers[21].group='fallback'
+openclash.@dns_servers[21].ip='jp.tiar.app'
+openclash.@dns_servers[21].type='tls'
+openclash.@dns_servers[21].disable_ipv6='0'
+openclash.@dns_servers[22]=dns_servers
+openclash.@dns_servers[22].enabled='0'
+openclash.@dns_servers[22].group='fallback'
+openclash.@dns_servers[22].ip='dot.tiar.app'
+openclash.@dns_servers[22].type='tls'
+openclash.@dns_servers[22].disable_ipv6='0'
+openclash.@dns_servers[23]=dns_servers
+openclash.@dns_servers[23].enabled='0'
+openclash.@dns_servers[23].group='fallback'
+openclash.@dns_servers[23].ip='dns.quad9.net/dns-query'
+openclash.@dns_servers[23].type='https'
+openclash.@dns_servers[23].disable_ipv6='0'
+openclash.@dns_servers[24]=dns_servers
+openclash.@dns_servers[24].enabled='0'
+openclash.@dns_servers[24].group='fallback'
+openclash.@dns_servers[24].ip='dns.google/dns-query'
+openclash.@dns_servers[24].type='https'
+openclash.@dns_servers[24].disable_ipv6='0'
+openclash.@dns_servers[25]=dns_servers
+openclash.@dns_servers[25].enabled='0'
+openclash.@dns_servers[25].group='fallback'
+openclash.@dns_servers[25].ip='dns.cloudflare.com/dns-query'
+openclash.@dns_servers[25].type='https'
+openclash.@dns_servers[25].disable_ipv6='0'
+openclash.@dns_servers[26]=dns_servers
+openclash.@dns_servers[26].enabled='0'
+openclash.@dns_servers[26].group='fallback'
+openclash.@dns_servers[26].ip='1.1.1.1/dns-query'
+openclash.@dns_servers[26].type='https'
+openclash.@dns_servers[26].disable_ipv6='0'
+openclash.@dns_servers[27]=dns_servers
+openclash.@dns_servers[27].enabled='0'
+openclash.@dns_servers[27].group='fallback'
+openclash.@dns_servers[27].ip='public.dns.iij.jp/dns-query'
+openclash.@dns_servers[27].type='https'
+openclash.@dns_servers[27].disable_ipv6='0'
+openclash.@dns_servers[28]=dns_servers
+openclash.@dns_servers[28].enabled='0'
+openclash.@dns_servers[28].group='fallback'
+openclash.@dns_servers[28].ip='jp.tiar.app/dns-query'
+openclash.@dns_servers[28].type='https'
+openclash.@dns_servers[28].disable_ipv6='0'
+openclash.@dns_servers[29]=dns_servers
+openclash.@dns_servers[29].enabled='0'
+openclash.@dns_servers[29].group='fallback'
+openclash.@dns_servers[29].ip='jp.tiarap.org/dns-query'
+openclash.@dns_servers[29].type='https'
+openclash.@dns_servers[29].disable_ipv6='0'
+openclash.@dns_servers[30]=dns_servers
+openclash.@dns_servers[30].enabled='0'
+openclash.@dns_servers[30].group='fallback'
+openclash.@dns_servers[30].type='https'
+openclash.@dns_servers[30].ip='doh.dnslify.com/dns-query'
+openclash.@dns_servers[30].disable_ipv6='0'
+openclash.@dns_servers[31]=dns_servers
+openclash.@dns_servers[31].enabled='0'
+openclash.@dns_servers[31].group='fallback'
+openclash.@dns_servers[31].ip='dns.twnic.tw/dns-query'
+openclash.@dns_servers[31].type='https'
+openclash.@dns_servers[31].disable_ipv6='0'
+openclash.@dns_servers[32]=dns_servers
+openclash.@dns_servers[32].enabled='0'
+openclash.@dns_servers[32].group='fallback'
+openclash.@dns_servers[32].ip='dns.oszx.co/dns-query'
+openclash.@dns_servers[32].type='https'
+openclash.@dns_servers[32].disable_ipv6='0'
+openclash.@dns_servers[33]=dns_servers
+openclash.@dns_servers[33].enabled='0'
+openclash.@dns_servers[33].group='fallback'
+openclash.@dns_servers[33].ip='doh.applied-privacy.net/query'
+openclash.@dns_servers[33].type='https'
+openclash.@dns_servers[33].disable_ipv6='0'
+openclash.@dns_servers[34]=dns_servers
+openclash.@dns_servers[34].enabled='0'
+openclash.@dns_servers[34].group='fallback'
+openclash.@dns_servers[34].ip='dnsforge.de/dns-query'
+openclash.@dns_servers[34].type='https'
+openclash.@dns_servers[34].disable_ipv6='0'
+openclash.@dns_servers[35]=dns_servers
+openclash.@dns_servers[35].enabled='0'
+openclash.@dns_servers[35].group='fallback'
+openclash.@dns_servers[35].ip='doh.ffmuc.net/dns-query'
+openclash.@dns_servers[35].type='https'
+openclash.@dns_servers[35].disable_ipv6='0'
+openclash.@dns_servers[36]=dns_servers
+openclash.@dns_servers[36].enabled='0'
+openclash.@dns_servers[36].group='fallback'
+openclash.@dns_servers[36].ip='doh.mullvad.net/dns-query'
+openclash.@dns_servers[36].type='https'
+openclash.@dns_servers[36].disable_ipv6='0'
+openclash.@authentication[0]=authentication
+openclash.@authentication[0].enabled='0'
+openclash.@authentication[0].username='Clash'
+openclash.@authentication[0].password='AaJEQEX6'
+openlist2.@openlist2[0]=openlist2
+openlist2.@openlist2[0].enabled='0'
+openlist2.@openlist2[0].port='5244'
+openlist2.@openlist2[0].delayed_start='0'
+openlist2.@openlist2[0].allow_wan='0'
+openlist2.@openlist2[0].force='1'
+openlist2.@openlist2[0].token_expires_in='48'
+openlist2.@openlist2[0].max_connections='0'
+openlist2.@openlist2[0].tls_insecure_skip_verify='1'
+openlist2.@openlist2[0].data_dir='/etc/openlist2'
+openlist2.@openlist2[0].temp_dir='/tmp/openlist2'
+openlist2.@openlist2[0].log='1'
+openlist2.@openlist2[0].log_max_size='10'
+openlist2.@openlist2[0].log_max_backups='5'
+openlist2.@openlist2[0].log_max_age='28'
+openlist2.@openlist2[0].log_compress='0'
+openlist2.@openlist2[0].database_type='sqlite3'
+openlist2.@openlist2[0].ssl='0'
+openlist2.@openlist2[0].download_workers='5'
+openlist2.@openlist2[0].download_max_retry='1'
+openlist2.@openlist2[0].transfer_workers='5'
+openlist2.@openlist2[0].transfer_max_retry='2'
+openlist2.@openlist2[0].upload_workers='5'
+openlist2.@openlist2[0].upload_max_retry='0'
+openlist2.@openlist2[0].copy_workers='5'
+openlist2.@openlist2[0].copy_max_retry='2'
+openlist2.@openlist2[0].cors_allow_origins='*'
+openlist2.@openlist2[0].cors_allow_methods='*'
+openlist2.@openlist2[0].cors_allow_headers='*'
+openlist2.@openlist2[0].s3='0'
+openlist2.@openlist2[0].jwt_secret='yJ1DmoJboeEwLmz6'
+openssl.afalg=engine
+openssl.afalg.enabled='1'
+openssl.devcrypto=engine
+openssl.devcrypto.enabled='1'
+openssl.legacy=provider
+openssl.legacy.enabled='1'
+ota.config=ota
+ota.config.api_url='https://api.cooluc.com/openwrt/ota.json'
+p910nd.@p910nd[0]=p910nd
+p910nd.@p910nd[0].device='/dev/usb/lp0'
+p910nd.@p910nd[0].port='0'
+p910nd.@p910nd[0].bidirectional='1'
+p910nd.@p910nd[0].enabled='0'
+p910nd.@p910nd[0].runas_root='0'
+p910nd.@p910nd[0].mdns='0'
+p910nd.@p910nd[0].mdns_ty='My Printer Manufacturer/Model'
+p910nd.@p910nd[0].mdns_note='Basement'
+passwall.@global[0]=global
+passwall.@global[0].enabled='0'
+passwall.@global[0].socks_enabled='0'
+passwall.@global[0].tcp_node_socks_port='1070'
+passwall.@global[0].filter_proxy_ipv6='1'
+passwall.@global[0].dns_shunt='chinadns-ng'
+passwall.@global[0].dns_mode='tcp'
+passwall.@global[0].remote_dns='1.1.1.1'
+passwall.@global[0].smartdns_remote_dns='https://1.1.1.1/dns-query'
+passwall.@global[0].chinadns_ng_default_tag='none'
+passwall.@global[0].dns_redirect='1'
+passwall.@global[0].chn_list='direct'
+passwall.@global[0].tcp_proxy_mode='proxy'
+passwall.@global[0].udp_proxy_mode='proxy'
+passwall.@global[0].localhost_proxy='1'
+passwall.@global[0].client_proxy='1'
+passwall.@global[0].acl_enable='0'
+passwall.@global[0].log_tcp='0'
+passwall.@global[0].log_udp='0'
+passwall.@global[0].loglevel='error'
+passwall.@global[0].trojan_loglevel='4'
+passwall.@global[0].log_chinadns_ng='0'
+passwall.@global[0].tcp_node='PHCgG2PY'
+passwall.@global[0].udp_node='tcp'
+passwall.@global[0].force_https_soa='1'
+passwall.@global_haproxy[0]=global_haproxy
+passwall.@global_haproxy[0].balancing_enable='0'
+passwall.@global_delay[0]=global_delay
+passwall.@global_delay[0].start_daemon='1'
+passwall.@global_delay[0].start_delay='15'
+passwall.@global_forwarding[0]=global_forwarding
+passwall.@global_forwarding[0].tcp_no_redir_ports='disable'
+passwall.@global_forwarding[0].udp_no_redir_ports='disable'
+passwall.@global_forwarding[0].tcp_proxy_drop_ports='disable'
+passwall.@global_forwarding[0].udp_proxy_drop_ports='443'
+passwall.@global_forwarding[0].tcp_redir_ports='22,25,53,80,143,443,465,587,853,873,993,995,5222,8080,8443,9418'
+passwall.@global_forwarding[0].udp_redir_ports='1:65535'
+passwall.@global_forwarding[0].accept_icmp='0'
+passwall.@global_forwarding[0].use_nft='0'
+passwall.@global_forwarding[0].tcp_proxy_way='redirect'
+passwall.@global_forwarding[0].ipv6_tproxy='0'
+passwall.@global_xray[0]=global_xray
+passwall.@global_xray[0].sniffing_override_dest='0'
+passwall.@global_singbox[0]=global_singbox
+passwall.@global_singbox[0].sniff_override_destination='0'
+passwall.@global_other[0]=global_other
+passwall.@global_other[0].auto_detection_time='tcping'
+passwall.@global_other[0].show_node_info='0'
+passwall.@global_rules[0]=global_rules
+passwall.@global_rules[0].auto_update='0'
+passwall.@global_rules[0].chnlist_update='1'
+passwall.@global_rules[0].chnroute_update='1'
+passwall.@global_rules[0].chnroute6_update='1'
+passwall.@global_rules[0].gfwlist_update='1'
+passwall.@global_rules[0].geosite_update='0'
+passwall.@global_rules[0].geoip_update='0'
+passwall.@global_rules[0].gfwlist_url='https://fastly.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/gfw.txt'
+passwall.@global_rules[0].chnroute_url='https://ispip.clang.cn/all_cn.txt' 'https://fastly.jsdelivr.net/gh/gaoyifan/china-operator-ip@ip-lists/china.txt'
+passwall.@global_rules[0].chnroute6_url='https://ispip.clang.cn/all_cn_ipv6.txt' 'https://fastly.jsdelivr.net/gh/gaoyifan/china-operator-ip@ip-lists/china6.txt'
+passwall.@global_rules[0].chnlist_url='https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/accelerated-domains.china.conf' 'https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/apple.china.conf'
+passwall.@global_rules[0].v2ray_location_asset='/usr/share/v2ray/'
+passwall.@global_rules[0].geoip_url='https://github.com/Loyalsoldier/geoip/releases/latest/download/geoip.dat'
+passwall.@global_rules[0].geosite_url='https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat'
+passwall.@global_app[0]=global_app
+passwall.@global_app[0].sing_box_file='/usr/bin/sing-box'
+passwall.@global_app[0].xray_file='/usr/bin/xray'
+passwall.@global_app[0].hysteria_file='/usr/bin/hysteria'
+passwall.@global_subscribe[0]=global_subscribe
+passwall.@global_subscribe[0].filter_keyword_mode='1'
+passwall.@global_subscribe[0].filter_discard_list='距离下次重置剩余' '套餐到期' '过期时间' '剩余流量' 'QQ群' '官网'
+passwall.@global_subscribe[0].ss_type='shadowsocks-libev'
+passwall.@global_subscribe[0].trojan_type='sing-box'
+passwall.@global_subscribe[0].vmess_type='xray'
+passwall.@global_subscribe[0].vless_type='xray'
+passwall.@global_subscribe[0].hysteria2_type='sing-box'
+passwall.myshunt=nodes
+passwall.myshunt.remarks='分流总节点'
+passwall.myshunt.type='Xray'
+passwall.myshunt.protocol='_shunt'
+passwall.myshunt.DirectGame='_direct'
+passwall.myshunt.ProxyGame='_default'
+passwall.myshunt.AIGC='_default'
+passwall.myshunt.Streaming='_default'
+passwall.myshunt.Proxy='_default'
+passwall.myshunt.Direct='_direct'
+passwall.myshunt.default_node='_direct'
+passwall.myshunt.domainStrategy='IPOnDemand'
+passwall.DirectGame=shunt_rules
+passwall.DirectGame.remarks='DirectGame'
+passwall.DirectGame.domain_list='# steam直连域名获取国内CDN走国内线路下载
+cm.steampowered.com
+steamserver.net
+
+# steam国内CDN华为云
+steampipe.steamcontent.tnkjmec.com
+# steam国内CDN白山云
+st.dl.eccdnx.com
+st.dl.bscstorage.net
+st.dl.pinyuncloud.com
+# steam国内CDN新流云(原金山云)(支持ipv6)
+dl.steam.clngaa.com
+# steam国内CDN网宿
+cdn.mileweb.cs.steampowered.com.8686c.com
+cdn-ws.content.steamchina.com
+# steam国内CDN腾讯云 (蒸汽中国独占)
+cdn-qc.content.steamchina.com
+# steam国内CDN阿里云(支持ipv6)
+cdn-ali.content.steamchina.com
+xz.pphimalayanrt.com
+lv.queniujq.cn
+alibaba.cdn.steampipe.steamcontent.com
+
+# 国内游戏geosite域名
+geosite:category-games@cn'
+passwall.DirectGame.ip_list='# steam直连IP
+45.121.184.0/24
+103.10.124.0/23
+103.28.54.0/24
+146.66.152.0/24
+146.66.155.0/24
+153.254.86.0/24
+155.133.224.0/22
+155.133.230.0/24
+155.133.232.0/23
+155.133.234.0/24
+155.133.236.0/22
+155.133.240.0/23
+155.133.244.0/23
+155.133.246.0/24
+155.133.248.0/21
+162.254.192.0/21
+185.25.182.0/23
+190.217.32.0/22
+192.69.96.0/22
+205.196.6.0/24
+208.64.200.0/22
+208.78.164.0/22
+205.185.194.0/24'
+passwall.ProxyGame=shunt_rules
+passwall.ProxyGame.remarks='ProxyGame'
+passwall.ProxyGame.domain_list='# steam 商店/客服/聊天/网页布局/API/二维码/Google云同步 代理URL
+steamcommunity.com
+www.steamcommunity.com
+store.steampowered.com
+checkout.steampowered.com
+api.steampowered.com
+help.steampowered.com
+login.steampowered.com
+store.akamai.steamstatic.com
+steambroadcast.akamaized.net
+steamvideo-a.akamaihd.net
+steamusercontent-a.akamaihd.net
+steamstore-a.akamaihd.net
+steamcommunity-a.akamaihd.net
+steamcdn-a.akamaihd.net
+steamuserimages-a.akamaihd.net
+community.akamai.steamstatic.com
+avatars.akamai.steamstatic.com
+community.steamstatic.com
+cdn.akamai.steamstatic.com
+avatars.steamstatic.com
+shared.akamai.steamstatic.com
+clan.akamai.steamstatic.com
+cdn.cloudflare.steamstatic.com
+community.cloudflare.steamstatic.com
+store.cloudflare.steamstatic.com
+avatars.cloudflare.steamstatic.com
+clan.cloudflare.steamstatic.com
+shared.cloudflare.steamstatic.com
+steam-chat.com
+steamcloud-ugc.storage.googleapis.com
+steamcloud-eu-ams.storage.googleapis.com
+steamcloud-eu-fra.storage.googleapis.com
+steamcloud-finland.storage.googleapis.com
+steamcloud-saopaulo.storage.googleapis.com
+steamcloud-singapore.storage.googleapis.com
+steamcloud-sydney.storage.googleapis.com
+steamcloud-taiwan.storage.googleapis.com
+steamcloud-eu.storage.googleapis.com
+
+geosite:category-games'
+passwall.AIGC=shunt_rules
+passwall.AIGC.remarks='AIGC'
+passwall.AIGC.domain_list='geosite:category-ai-!cn
+geosite:apple-intelligence'
+passwall.Streaming=shunt_rules
+passwall.Streaming.remarks='Streaming'
+passwall.Streaming.domain_list='geosite:netflix
+geosite:disney'
+passwall.Proxy=shunt_rules
+passwall.Proxy.remarks='Proxy'
+passwall.Proxy.domain_list='geosite:geolocation-!cn'
+passwall.Proxy.ip_list='149.154.160.0/20
+91.108.4.0/22
+91.108.56.0/24
+109.239.140.0/24
+67.198.55.0/24
+8.8.4.4
+8.8.8.8
+208.67.222.222
+208.67.220.220
+1.1.1.1
+1.1.1.2
+1.0.0.1
+9.9.9.9
+149.112.112.112
+2001:67c:4e8::/48
+2001:b28:f23c::/48
+2001:b28:f23d::/48
+2001:b28:f23f::/48
+2001:b28:f242::/48
+2001:4860:4860::8888
+2001:4860:4860::8844
+2606:4700:4700::1111
+2606:4700:4700::1001'
+passwall.Direct=shunt_rules
+passwall.Direct.remarks='Direct'
+passwall.Direct.domain_list='geosite:cn'
+passwall.Direct.ip_list='223.5.5.5/32
+223.6.6.6/32
+119.29.29.29/32
+180.76.76.76/32
+114.114.114.114/32
+114.114.115.115/32
+1.12.12.12/32
+120.53.53.53/32
+geoip:cn
+geoip:private'
+passwall.@subscribe_list[0]=subscribe_list
+passwall.@subscribe_list[0].remark='ikuajing'
+passwall.@subscribe_list[0].url='https://kuajingnote-api01.trafficmanager.net/link/uSxRqk5h5FCUAwPc?sub=3'
+passwall.@subscribe_list[0].allowInsecure='0'
+passwall.@subscribe_list[0].filter_keyword_mode='5'
+passwall.@subscribe_list[0].ss_type='global'
+passwall.@subscribe_list[0].trojan_type='global'
+passwall.@subscribe_list[0].vmess_type='global'
+passwall.@subscribe_list[0].vless_type='global'
+passwall.@subscribe_list[0].hysteria2_type='global'
+passwall.@subscribe_list[0].domain_strategy='global'
+passwall.@subscribe_list[0].auto_update='0'
+passwall.@subscribe_list[0].user_agent='passwall'
+passwall.@subscribe_list[0].md5='56e8b0713e643933b0d73c024cf76724'
+passwall.@subscribe_list[0].rem_traffic='70.86GB'
+passwall.FkV1jrsO=nodes
+passwall.FkV1jrsO.tls='1'
+passwall.FkV1jrsO.type='sing-box'
+passwall.FkV1jrsO.timeout='60'
+passwall.FkV1jrsO.tcp_guise='none'
+passwall.FkV1jrsO.add_from='ikuajing'
+passwall.FkV1jrsO.protocol='trojan'
+passwall.FkV1jrsO.tls_serverName='eplcgame.com'
+passwall.FkV1jrsO.port='34655'
+passwall.FkV1jrsO.transport='tcp'
+passwall.FkV1jrsO.address='sg.wgnmdgfw.com'
+passwall.FkV1jrsO.remarks='亚洲-游戏专线2.0倍率'
+passwall.FkV1jrsO.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.FkV1jrsO.tls_allowInsecure='0'
+passwall.FkV1jrsO.add_mode='2'
+passwall.JWRi0mGl=nodes
+passwall.JWRi0mGl.tls='1'
+passwall.JWRi0mGl.type='sing-box'
+passwall.JWRi0mGl.timeout='60'
+passwall.JWRi0mGl.tcp_guise='none'
+passwall.JWRi0mGl.add_from='ikuajing'
+passwall.JWRi0mGl.protocol='trojan'
+passwall.JWRi0mGl.tls_serverName='eplcgame.com'
+passwall.JWRi0mGl.port='34604'
+passwall.JWRi0mGl.transport='tcp'
+passwall.JWRi0mGl.address='kj.wgnmdgfw.com'
+passwall.JWRi0mGl.remarks='加拿大-CA-01'
+passwall.JWRi0mGl.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.JWRi0mGl.tls_allowInsecure='0'
+passwall.JWRi0mGl.add_mode='2'
+passwall.xQ5qK9zp=nodes
+passwall.xQ5qK9zp.tls='1'
+passwall.xQ5qK9zp.type='sing-box'
+passwall.xQ5qK9zp.timeout='60'
+passwall.xQ5qK9zp.tcp_guise='none'
+passwall.xQ5qK9zp.add_from='ikuajing'
+passwall.xQ5qK9zp.protocol='trojan'
+passwall.xQ5qK9zp.tls_serverName='eplcgame.com'
+passwall.xQ5qK9zp.port='34653'
+passwall.xQ5qK9zp.transport='tcp'
+passwall.xQ5qK9zp.address='sg.wgnmdgfw.com'
+passwall.xQ5qK9zp.remarks='北美-游戏专线2.0倍率'
+passwall.xQ5qK9zp.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.xQ5qK9zp.tls_allowInsecure='0'
+passwall.xQ5qK9zp.add_mode='2'
+passwall.pIeDBTRG=nodes
+passwall.pIeDBTRG.tls='1'
+passwall.pIeDBTRG.type='sing-box'
+passwall.pIeDBTRG.timeout='60'
+passwall.pIeDBTRG.tcp_guise='none'
+passwall.pIeDBTRG.add_from='ikuajing'
+passwall.pIeDBTRG.protocol='trojan'
+passwall.pIeDBTRG.tls_serverName='eplcgame.com'
+passwall.pIeDBTRG.port='34646'
+passwall.pIeDBTRG.transport='tcp'
+passwall.pIeDBTRG.address='kj.wgnmdgfw.com'
+passwall.pIeDBTRG.remarks='南极-IS-01'
+passwall.pIeDBTRG.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.pIeDBTRG.tls_allowInsecure='0'
+passwall.pIeDBTRG.add_mode='2'
+passwall.S5e8QGm8=nodes
+passwall.S5e8QGm8.tls='1'
+passwall.S5e8QGm8.type='sing-box'
+passwall.S5e8QGm8.timeout='60'
+passwall.S5e8QGm8.tcp_guise='none'
+passwall.S5e8QGm8.add_from='ikuajing'
+passwall.S5e8QGm8.protocol='trojan'
+passwall.S5e8QGm8.tls_serverName='eplcgame.com'
+passwall.S5e8QGm8.port='34648'
+passwall.S5e8QGm8.transport='tcp'
+passwall.S5e8QGm8.address='sg.wgnmdgfw.com'
+passwall.S5e8QGm8.remarks='南非-ZA-01'
+passwall.S5e8QGm8.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.S5e8QGm8.tls_allowInsecure='0'
+passwall.S5e8QGm8.add_mode='2'
+passwall.w1VQdWUE=nodes
+passwall.w1VQdWUE.tls='1'
+passwall.w1VQdWUE.type='sing-box'
+passwall.w1VQdWUE.timeout='60'
+passwall.w1VQdWUE.tcp_guise='none'
+passwall.w1VQdWUE.add_from='ikuajing'
+passwall.w1VQdWUE.protocol='trojan'
+passwall.w1VQdWUE.tls_serverName='eplcgame.com'
+passwall.w1VQdWUE.port='34605'
+passwall.w1VQdWUE.transport='tcp'
+passwall.w1VQdWUE.address='sg.wgnmdgfw.com'
+passwall.w1VQdWUE.remarks='印尼-ID-01'
+passwall.w1VQdWUE.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.w1VQdWUE.tls_allowInsecure='0'
+passwall.w1VQdWUE.add_mode='2'
+passwall.hOAfTlJh=nodes
+passwall.hOAfTlJh.tls='1'
+passwall.hOAfTlJh.type='sing-box'
+passwall.hOAfTlJh.timeout='60'
+passwall.hOAfTlJh.tcp_guise='none'
+passwall.hOAfTlJh.add_from='ikuajing'
+passwall.hOAfTlJh.protocol='trojan'
+passwall.hOAfTlJh.tls_serverName='eplcgame.com'
+passwall.hOAfTlJh.port='34606'
+passwall.hOAfTlJh.transport='tcp'
+passwall.hOAfTlJh.address='kj.wgnmdgfw.com'
+passwall.hOAfTlJh.remarks='印度-IN-01'
+passwall.hOAfTlJh.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.hOAfTlJh.tls_allowInsecure='0'
+passwall.hOAfTlJh.add_mode='2'
+passwall.mktubZgp=nodes
+passwall.mktubZgp.tls='1'
+passwall.mktubZgp.type='sing-box'
+passwall.mktubZgp.timeout='60'
+passwall.mktubZgp.tcp_guise='none'
+passwall.mktubZgp.add_from='ikuajing'
+passwall.mktubZgp.protocol='trojan'
+passwall.mktubZgp.tls_serverName='eplcgame.com'
+passwall.mktubZgp.port='34607'
+passwall.mktubZgp.transport='tcp'
+passwall.mktubZgp.address='kj.wgnmdgfw.com'
+passwall.mktubZgp.remarks='台湾-TW-01'
+passwall.mktubZgp.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.mktubZgp.tls_allowInsecure='0'
+passwall.mktubZgp.add_mode='2'
+passwall.PHCgG2PY=nodes
+passwall.PHCgG2PY.tls='1'
+passwall.PHCgG2PY.type='sing-box'
+passwall.PHCgG2PY.timeout='60'
+passwall.PHCgG2PY.tcp_guise='none'
+passwall.PHCgG2PY.add_from='ikuajing'
+passwall.PHCgG2PY.protocol='trojan'
+passwall.PHCgG2PY.tls_serverName='eplcgame.com'
+passwall.PHCgG2PY.port='34608'
+passwall.PHCgG2PY.transport='tcp'
+passwall.PHCgG2PY.address='kj.wgnmdgfw.com'
+passwall.PHCgG2PY.remarks='台湾-TW-02'
+passwall.PHCgG2PY.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.PHCgG2PY.tls_allowInsecure='0'
+passwall.PHCgG2PY.add_mode='2'
+passwall.ZYzcrCno=nodes
+passwall.ZYzcrCno.tls='1'
+passwall.ZYzcrCno.type='sing-box'
+passwall.ZYzcrCno.timeout='60'
+passwall.ZYzcrCno.tcp_guise='none'
+passwall.ZYzcrCno.add_from='ikuajing'
+passwall.ZYzcrCno.protocol='trojan'
+passwall.ZYzcrCno.tls_serverName='eplcgame.com'
+passwall.ZYzcrCno.port='34609'
+passwall.ZYzcrCno.transport='tcp'
+passwall.ZYzcrCno.address='kj.wgnmdgfw.com'
+passwall.ZYzcrCno.remarks='台湾-TW-03'
+passwall.ZYzcrCno.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.ZYzcrCno.tls_allowInsecure='0'
+passwall.ZYzcrCno.add_mode='2'
+passwall.CAzuLoCn=nodes
+passwall.CAzuLoCn.tls='1'
+passwall.CAzuLoCn.type='sing-box'
+passwall.CAzuLoCn.timeout='60'
+passwall.CAzuLoCn.tcp_guise='none'
+passwall.CAzuLoCn.add_from='ikuajing'
+passwall.CAzuLoCn.protocol='trojan'
+passwall.CAzuLoCn.tls_serverName='eplcgame.com'
+passwall.CAzuLoCn.port='34610'
+passwall.CAzuLoCn.transport='tcp'
+passwall.CAzuLoCn.address='kj.wgnmdgfw.com'
+passwall.CAzuLoCn.remarks='土耳其-TR-01'
+passwall.CAzuLoCn.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.CAzuLoCn.tls_allowInsecure='0'
+passwall.CAzuLoCn.add_mode='2'
+passwall.31Ayq5nX=nodes
+passwall.31Ayq5nX.tls='1'
+passwall.31Ayq5nX.type='sing-box'
+passwall.31Ayq5nX.timeout='60'
+passwall.31Ayq5nX.tcp_guise='none'
+passwall.31Ayq5nX.add_from='ikuajing'
+passwall.31Ayq5nX.protocol='trojan'
+passwall.31Ayq5nX.tls_serverName='eplcgame.com'
+passwall.31Ayq5nX.port='34648'
+passwall.31Ayq5nX.transport='tcp'
+passwall.31Ayq5nX.address='sg.wgnmdgfw.com'
+passwall.31Ayq5nX.remarks='埃及-EG-01'
+passwall.31Ayq5nX.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.31Ayq5nX.tls_allowInsecure='0'
+passwall.31Ayq5nX.add_mode='2'
+passwall.FBLB9tLL=nodes
+passwall.FBLB9tLL.tls='1'
+passwall.FBLB9tLL.type='sing-box'
+passwall.FBLB9tLL.timeout='60'
+passwall.FBLB9tLL.tcp_guise='none'
+passwall.FBLB9tLL.add_from='ikuajing'
+passwall.FBLB9tLL.protocol='trojan'
+passwall.FBLB9tLL.tls_serverName='eplcgame.com'
+passwall.FBLB9tLL.port='34658'
+passwall.FBLB9tLL.transport='tcp'
+passwall.FBLB9tLL.address='sg.wgnmdgfw.com'
+passwall.FBLB9tLL.remarks='墨西哥-MX-01'
+passwall.FBLB9tLL.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.FBLB9tLL.tls_allowInsecure='0'
+passwall.FBLB9tLL.add_mode='2'
+passwall.3UHeh5ZD=nodes
+passwall.3UHeh5ZD.tls='1'
+passwall.3UHeh5ZD.type='sing-box'
+passwall.3UHeh5ZD.timeout='60'
+passwall.3UHeh5ZD.tcp_guise='none'
+passwall.3UHeh5ZD.add_from='ikuajing'
+passwall.3UHeh5ZD.protocol='trojan'
+passwall.3UHeh5ZD.tls_serverName='eplcgame.com'
+passwall.3UHeh5ZD.port='34644'
+passwall.3UHeh5ZD.transport='tcp'
+passwall.3UHeh5ZD.address='sg.wgnmdgfw.com'
+passwall.3UHeh5ZD.remarks='巴西-BR-01'
+passwall.3UHeh5ZD.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.3UHeh5ZD.tls_allowInsecure='0'
+passwall.3UHeh5ZD.add_mode='2'
+passwall.nHIOLazk=nodes
+passwall.nHIOLazk.tls='1'
+passwall.nHIOLazk.type='sing-box'
+passwall.nHIOLazk.timeout='60'
+passwall.nHIOLazk.tcp_guise='none'
+passwall.nHIOLazk.add_from='ikuajing'
+passwall.nHIOLazk.protocol='trojan'
+passwall.nHIOLazk.tls_serverName='eplcgame.com'
+passwall.nHIOLazk.port='34611'
+passwall.nHIOLazk.transport='tcp'
+passwall.nHIOLazk.address='kj.wgnmdgfw.com'
+passwall.nHIOLazk.remarks='德国-DE-01'
+passwall.nHIOLazk.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.nHIOLazk.tls_allowInsecure='0'
+passwall.nHIOLazk.add_mode='2'
+passwall.R7KriMu9=nodes
+passwall.R7KriMu9.tls='1'
+passwall.R7KriMu9.type='sing-box'
+passwall.R7KriMu9.timeout='60'
+passwall.R7KriMu9.tcp_guise='none'
+passwall.R7KriMu9.add_from='ikuajing'
+passwall.R7KriMu9.protocol='trojan'
+passwall.R7KriMu9.tls_serverName='eplcgame.com'
+passwall.R7KriMu9.port='34645'
+passwall.R7KriMu9.transport='tcp'
+passwall.R7KriMu9.address='sg.wgnmdgfw.com'
+passwall.R7KriMu9.remarks='拉脱维亚-LV-01'
+passwall.R7KriMu9.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.R7KriMu9.tls_allowInsecure='0'
+passwall.R7KriMu9.add_mode='2'
+passwall.EcqfGkEl=nodes
+passwall.EcqfGkEl.tls='1'
+passwall.EcqfGkEl.type='sing-box'
+passwall.EcqfGkEl.timeout='60'
+passwall.EcqfGkEl.tcp_guise='none'
+passwall.EcqfGkEl.add_from='ikuajing'
+passwall.EcqfGkEl.protocol='trojan'
+passwall.EcqfGkEl.tls_serverName='eplcgame.com'
+passwall.EcqfGkEl.port='34613'
+passwall.EcqfGkEl.transport='tcp'
+passwall.EcqfGkEl.address='sg.wgnmdgfw.com'
+passwall.EcqfGkEl.remarks='新加坡-SG-01'
+passwall.EcqfGkEl.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.EcqfGkEl.tls_allowInsecure='0'
+passwall.EcqfGkEl.add_mode='2'
+passwall.sFZwuwoo=nodes
+passwall.sFZwuwoo.tls='1'
+passwall.sFZwuwoo.type='sing-box'
+passwall.sFZwuwoo.timeout='60'
+passwall.sFZwuwoo.tcp_guise='none'
+passwall.sFZwuwoo.add_from='ikuajing'
+passwall.sFZwuwoo.protocol='trojan'
+passwall.sFZwuwoo.tls_serverName='eplcgame.com'
+passwall.sFZwuwoo.port='34612'
+passwall.sFZwuwoo.transport='tcp'
+passwall.sFZwuwoo.address='kj.wgnmdgfw.com'
+passwall.sFZwuwoo.remarks='新加坡-SG-02'
+passwall.sFZwuwoo.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.sFZwuwoo.tls_allowInsecure='0'
+passwall.sFZwuwoo.add_mode='2'
+passwall.JUTmiONK=nodes
+passwall.JUTmiONK.tls='1'
+passwall.JUTmiONK.type='sing-box'
+passwall.JUTmiONK.timeout='60'
+passwall.JUTmiONK.tcp_guise='none'
+passwall.JUTmiONK.add_from='ikuajing'
+passwall.JUTmiONK.protocol='trojan'
+passwall.JUTmiONK.tls_serverName='eplcgame.com'
+passwall.JUTmiONK.port='34640'
+passwall.JUTmiONK.transport='tcp'
+passwall.JUTmiONK.address='kj.wgnmdgfw.com'
+passwall.JUTmiONK.remarks='新加坡-SG-03'
+passwall.JUTmiONK.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.JUTmiONK.tls_allowInsecure='0'
+passwall.JUTmiONK.add_mode='2'
+passwall.HsrL75VS=nodes
+passwall.HsrL75VS.tls='1'
+passwall.HsrL75VS.type='sing-box'
+passwall.HsrL75VS.timeout='60'
+passwall.HsrL75VS.tcp_guise='none'
+passwall.HsrL75VS.add_from='ikuajing'
+passwall.HsrL75VS.protocol='trojan'
+passwall.HsrL75VS.tls_serverName='eplcgame.com'
+passwall.HsrL75VS.port='34636'
+passwall.HsrL75VS.transport='tcp'
+passwall.HsrL75VS.address='kj.wgnmdgfw.com'
+passwall.HsrL75VS.remarks='新加坡-SG-04'
+passwall.HsrL75VS.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.HsrL75VS.tls_allowInsecure='0'
+passwall.HsrL75VS.add_mode='2'
+passwall.AyRBdU0o=nodes
+passwall.AyRBdU0o.tls='1'
+passwall.AyRBdU0o.type='sing-box'
+passwall.AyRBdU0o.timeout='60'
+passwall.AyRBdU0o.tcp_guise='none'
+passwall.AyRBdU0o.add_from='ikuajing'
+passwall.AyRBdU0o.protocol='trojan'
+passwall.AyRBdU0o.tls_serverName='eplcgame.com'
+passwall.AyRBdU0o.port='34637'
+passwall.AyRBdU0o.transport='tcp'
+passwall.AyRBdU0o.address='sg.wgnmdgfw.com'
+passwall.AyRBdU0o.remarks='日本-JP-01'
+passwall.AyRBdU0o.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.AyRBdU0o.tls_allowInsecure='0'
+passwall.AyRBdU0o.add_mode='2'
+passwall.L82mFIRj=nodes
+passwall.L82mFIRj.tls='1'
+passwall.L82mFIRj.type='sing-box'
+passwall.L82mFIRj.timeout='60'
+passwall.L82mFIRj.tcp_guise='none'
+passwall.L82mFIRj.add_from='ikuajing'
+passwall.L82mFIRj.protocol='trojan'
+passwall.L82mFIRj.tls_serverName='eplcgame.com'
+passwall.L82mFIRj.port='34614'
+passwall.L82mFIRj.transport='tcp'
+passwall.L82mFIRj.address='kj.wgnmdgfw.com'
+passwall.L82mFIRj.remarks='日本-JP-02'
+passwall.L82mFIRj.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.L82mFIRj.tls_allowInsecure='0'
+passwall.L82mFIRj.add_mode='2'
+passwall.PS7eiLSK=nodes
+passwall.PS7eiLSK.tls='1'
+passwall.PS7eiLSK.type='sing-box'
+passwall.PS7eiLSK.timeout='60'
+passwall.PS7eiLSK.tcp_guise='none'
+passwall.PS7eiLSK.add_from='ikuajing'
+passwall.PS7eiLSK.protocol='trojan'
+passwall.PS7eiLSK.tls_serverName='eplcgame.com'
+passwall.PS7eiLSK.port='34615'
+passwall.PS7eiLSK.transport='tcp'
+passwall.PS7eiLSK.address='kj.wgnmdgfw.com'
+passwall.PS7eiLSK.remarks='日本-JP-03'
+passwall.PS7eiLSK.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.PS7eiLSK.tls_allowInsecure='0'
+passwall.PS7eiLSK.add_mode='2'
+passwall.iN0jfRnz=nodes
+passwall.iN0jfRnz.tls='1'
+passwall.iN0jfRnz.type='sing-box'
+passwall.iN0jfRnz.timeout='60'
+passwall.iN0jfRnz.tcp_guise='none'
+passwall.iN0jfRnz.add_from='ikuajing'
+passwall.iN0jfRnz.protocol='trojan'
+passwall.iN0jfRnz.tls_serverName='eplcgame.com'
+passwall.iN0jfRnz.port='34654'
+passwall.iN0jfRnz.transport='tcp'
+passwall.iN0jfRnz.address='sg.wgnmdgfw.com'
+passwall.iN0jfRnz.remarks='欧洲-游戏专线2.0倍率'
+passwall.iN0jfRnz.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.iN0jfRnz.tls_allowInsecure='0'
+passwall.iN0jfRnz.add_mode='2'
+passwall.GeTTOKjW=nodes
+passwall.GeTTOKjW.tls='1'
+passwall.GeTTOKjW.type='sing-box'
+passwall.GeTTOKjW.timeout='60'
+passwall.GeTTOKjW.tcp_guise='none'
+passwall.GeTTOKjW.add_from='ikuajing'
+passwall.GeTTOKjW.protocol='trojan'
+passwall.GeTTOKjW.tls_serverName='eplcgame.com'
+passwall.GeTTOKjW.port='34616'
+passwall.GeTTOKjW.transport='tcp'
+passwall.GeTTOKjW.address='kj.wgnmdgfw.com'
+passwall.GeTTOKjW.remarks='法国-FR-01'
+passwall.GeTTOKjW.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.GeTTOKjW.tls_allowInsecure='0'
+passwall.GeTTOKjW.add_mode='2'
+passwall.SfxTp8VL=nodes
+passwall.SfxTp8VL.tls='1'
+passwall.SfxTp8VL.type='sing-box'
+passwall.SfxTp8VL.timeout='60'
+passwall.SfxTp8VL.tcp_guise='none'
+passwall.SfxTp8VL.add_from='ikuajing'
+passwall.SfxTp8VL.protocol='trojan'
+passwall.SfxTp8VL.tls_serverName='eplcgame.com'
+passwall.SfxTp8VL.port='34641'
+passwall.SfxTp8VL.transport='tcp'
+passwall.SfxTp8VL.address='sg.wgnmdgfw.com'
+passwall.SfxTp8VL.remarks='波兰-PL-01'
+passwall.SfxTp8VL.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.SfxTp8VL.tls_allowInsecure='0'
+passwall.SfxTp8VL.add_mode='2'
+passwall.p1msrHrU=nodes
+passwall.p1msrHrU.tls='1'
+passwall.p1msrHrU.type='sing-box'
+passwall.p1msrHrU.timeout='60'
+passwall.p1msrHrU.tcp_guise='none'
+passwall.p1msrHrU.add_from='ikuajing'
+passwall.p1msrHrU.protocol='trojan'
+passwall.p1msrHrU.tls_serverName='eplcgame.com'
+passwall.p1msrHrU.port='34639'
+passwall.p1msrHrU.transport='tcp'
+passwall.p1msrHrU.address='kj.wgnmdgfw.com'
+passwall.p1msrHrU.remarks='泰国-TH-01'
+passwall.p1msrHrU.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.p1msrHrU.tls_allowInsecure='0'
+passwall.p1msrHrU.add_mode='2'
+passwall.ya5hATpc=nodes
+passwall.ya5hATpc.tls='1'
+passwall.ya5hATpc.type='sing-box'
+passwall.ya5hATpc.timeout='60'
+passwall.ya5hATpc.tcp_guise='none'
+passwall.ya5hATpc.add_from='ikuajing'
+passwall.ya5hATpc.protocol='trojan'
+passwall.ya5hATpc.tls_serverName='eplcgame.com'
+passwall.ya5hATpc.port='34617'
+passwall.ya5hATpc.transport='tcp'
+passwall.ya5hATpc.address='kj.wgnmdgfw.com'
+passwall.ya5hATpc.remarks='澳大利亚-AU-01'
+passwall.ya5hATpc.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.ya5hATpc.tls_allowInsecure='0'
+passwall.ya5hATpc.add_mode='2'
+passwall.GLk8U7ko=nodes
+passwall.GLk8U7ko.tls='1'
+passwall.GLk8U7ko.type='sing-box'
+passwall.GLk8U7ko.timeout='60'
+passwall.GLk8U7ko.tcp_guise='none'
+passwall.GLk8U7ko.add_from='ikuajing'
+passwall.GLk8U7ko.protocol='trojan'
+passwall.GLk8U7ko.tls_serverName='eplcgame.com'
+passwall.GLk8U7ko.port='34618'
+passwall.GLk8U7ko.transport='tcp'
+passwall.GLk8U7ko.address='kj.wgnmdgfw.com'
+passwall.GLk8U7ko.remarks='瑞典-SE-01'
+passwall.GLk8U7ko.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.GLk8U7ko.tls_allowInsecure='0'
+passwall.GLk8U7ko.add_mode='2'
+passwall.XOl7U9kH=nodes
+passwall.XOl7U9kH.tls='1'
+passwall.XOl7U9kH.type='sing-box'
+passwall.XOl7U9kH.timeout='60'
+passwall.XOl7U9kH.tcp_guise='none'
+passwall.XOl7U9kH.add_from='ikuajing'
+passwall.XOl7U9kH.protocol='trojan'
+passwall.XOl7U9kH.tls_serverName='eplcgame.com'
+passwall.XOl7U9kH.port='34632'
+passwall.XOl7U9kH.transport='tcp'
+passwall.XOl7U9kH.address='kj.wgnmdgfw.com'
+passwall.XOl7U9kH.remarks='美国-US-01'
+passwall.XOl7U9kH.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.XOl7U9kH.tls_allowInsecure='0'
+passwall.XOl7U9kH.add_mode='2'
+passwall.nm3qCwVW=nodes
+passwall.nm3qCwVW.tls='1'
+passwall.nm3qCwVW.type='sing-box'
+passwall.nm3qCwVW.timeout='60'
+passwall.nm3qCwVW.tcp_guise='none'
+passwall.nm3qCwVW.add_from='ikuajing'
+passwall.nm3qCwVW.protocol='trojan'
+passwall.nm3qCwVW.tls_serverName='eplcgame.com'
+passwall.nm3qCwVW.port='34620'
+passwall.nm3qCwVW.transport='tcp'
+passwall.nm3qCwVW.address='kj.wgnmdgfw.com'
+passwall.nm3qCwVW.remarks='美国-US-02'
+passwall.nm3qCwVW.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.nm3qCwVW.tls_allowInsecure='0'
+passwall.nm3qCwVW.add_mode='2'
+passwall.GcY5qcny=nodes
+passwall.GcY5qcny.tls='1'
+passwall.GcY5qcny.type='sing-box'
+passwall.GcY5qcny.timeout='60'
+passwall.GcY5qcny.tcp_guise='none'
+passwall.GcY5qcny.add_from='ikuajing'
+passwall.GcY5qcny.protocol='trojan'
+passwall.GcY5qcny.tls_serverName='eplcgame.com'
+passwall.GcY5qcny.port='34619'
+passwall.GcY5qcny.transport='tcp'
+passwall.GcY5qcny.address='kj.wgnmdgfw.com'
+passwall.GcY5qcny.remarks='美国-US-03'
+passwall.GcY5qcny.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.GcY5qcny.tls_allowInsecure='0'
+passwall.GcY5qcny.add_mode='2'
+passwall.EdZSnZMZ=nodes
+passwall.EdZSnZMZ.tls='1'
+passwall.EdZSnZMZ.type='sing-box'
+passwall.EdZSnZMZ.timeout='60'
+passwall.EdZSnZMZ.tcp_guise='none'
+passwall.EdZSnZMZ.add_from='ikuajing'
+passwall.EdZSnZMZ.protocol='trojan'
+passwall.EdZSnZMZ.tls_serverName='eplcgame.com'
+passwall.EdZSnZMZ.port='34651'
+passwall.EdZSnZMZ.transport='tcp'
+passwall.EdZSnZMZ.address='sg.wgnmdgfw.com'
+passwall.EdZSnZMZ.remarks='美国-US-04'
+passwall.EdZSnZMZ.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.EdZSnZMZ.tls_allowInsecure='0'
+passwall.EdZSnZMZ.add_mode='2'
+passwall.xXXppgFy=nodes
+passwall.xXXppgFy.tls='1'
+passwall.xXXppgFy.type='sing-box'
+passwall.xXXppgFy.timeout='60'
+passwall.xXXppgFy.tcp_guise='none'
+passwall.xXXppgFy.add_from='ikuajing'
+passwall.xXXppgFy.protocol='trojan'
+passwall.xXXppgFy.tls_serverName='eplcgame.com'
+passwall.xXXppgFy.port='34631'
+passwall.xXXppgFy.transport='tcp'
+passwall.xXXppgFy.address='kj.wgnmdgfw.com'
+passwall.xXXppgFy.remarks='美国-US-05'
+passwall.xXXppgFy.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.xXXppgFy.tls_allowInsecure='0'
+passwall.xXXppgFy.add_mode='2'
+passwall.XlRSdqeJ=nodes
+passwall.XlRSdqeJ.tls='1'
+passwall.XlRSdqeJ.type='sing-box'
+passwall.XlRSdqeJ.timeout='60'
+passwall.XlRSdqeJ.tcp_guise='none'
+passwall.XlRSdqeJ.add_from='ikuajing'
+passwall.XlRSdqeJ.protocol='trojan'
+passwall.XlRSdqeJ.tls_serverName='eplcgame.com'
+passwall.XlRSdqeJ.port='34647'
+passwall.XlRSdqeJ.transport='tcp'
+passwall.XlRSdqeJ.address='kj.wgnmdgfw.com'
+passwall.XlRSdqeJ.remarks='美国-US-06'
+passwall.XlRSdqeJ.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.XlRSdqeJ.tls_allowInsecure='0'
+passwall.XlRSdqeJ.add_mode='2'
+passwall.WBW1DEXs=nodes
+passwall.WBW1DEXs.tls='1'
+passwall.WBW1DEXs.type='sing-box'
+passwall.WBW1DEXs.timeout='60'
+passwall.WBW1DEXs.tcp_guise='none'
+passwall.WBW1DEXs.add_from='ikuajing'
+passwall.WBW1DEXs.protocol='trojan'
+passwall.WBW1DEXs.tls_serverName='eplcgame.com'
+passwall.WBW1DEXs.port='34621'
+passwall.WBW1DEXs.transport='tcp'
+passwall.WBW1DEXs.address='sg.wgnmdgfw.com'
+passwall.WBW1DEXs.remarks='英国-UK-01'
+passwall.WBW1DEXs.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.WBW1DEXs.tls_allowInsecure='0'
+passwall.WBW1DEXs.add_mode='2'
+passwall.6WwMZ7Jd=nodes
+passwall.6WwMZ7Jd.tls='1'
+passwall.6WwMZ7Jd.type='sing-box'
+passwall.6WwMZ7Jd.timeout='60'
+passwall.6WwMZ7Jd.tcp_guise='none'
+passwall.6WwMZ7Jd.add_from='ikuajing'
+passwall.6WwMZ7Jd.protocol='trojan'
+passwall.6WwMZ7Jd.tls_serverName='eplcgame.com'
+passwall.6WwMZ7Jd.port='34630'
+passwall.6WwMZ7Jd.transport='tcp'
+passwall.6WwMZ7Jd.address='kj.wgnmdgfw.com'
+passwall.6WwMZ7Jd.remarks='荷兰-NL-01'
+passwall.6WwMZ7Jd.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.6WwMZ7Jd.tls_allowInsecure='0'
+passwall.6WwMZ7Jd.add_mode='2'
+passwall.pgDAVykN=nodes
+passwall.pgDAVykN.tls='1'
+passwall.pgDAVykN.type='sing-box'
+passwall.pgDAVykN.timeout='60'
+passwall.pgDAVykN.tcp_guise='none'
+passwall.pgDAVykN.add_from='ikuajing'
+passwall.pgDAVykN.protocol='trojan'
+passwall.pgDAVykN.tls_serverName='eplcgame.com'
+passwall.pgDAVykN.port='34656'
+passwall.pgDAVykN.transport='tcp'
+passwall.pgDAVykN.address='kj.wgnmdgfw.com'
+passwall.pgDAVykN.remarks='菲律宾-PH-01'
+passwall.pgDAVykN.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.pgDAVykN.tls_allowInsecure='0'
+passwall.pgDAVykN.add_mode='2'
+passwall.yIIb8HnQ=nodes
+passwall.yIIb8HnQ.tls='1'
+passwall.yIIb8HnQ.type='sing-box'
+passwall.yIIb8HnQ.timeout='60'
+passwall.yIIb8HnQ.tcp_guise='none'
+passwall.yIIb8HnQ.add_from='ikuajing'
+passwall.yIIb8HnQ.protocol='trojan'
+passwall.yIIb8HnQ.tls_serverName='eplcgame.com'
+passwall.yIIb8HnQ.port='34652'
+passwall.yIIb8HnQ.transport='tcp'
+passwall.yIIb8HnQ.address='kj.wgnmdgfw.com'
+passwall.yIIb8HnQ.remarks='西班牙-ES-01'
+passwall.yIIb8HnQ.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.yIIb8HnQ.tls_allowInsecure='0'
+passwall.yIIb8HnQ.add_mode='2'
+passwall.5dbjucel=nodes
+passwall.5dbjucel.tls='1'
+passwall.5dbjucel.type='sing-box'
+passwall.5dbjucel.timeout='60'
+passwall.5dbjucel.tcp_guise='none'
+passwall.5dbjucel.add_from='ikuajing'
+passwall.5dbjucel.protocol='trojan'
+passwall.5dbjucel.tls_serverName='eplcgame.com'
+passwall.5dbjucel.port='34601'
+passwall.5dbjucel.transport='tcp'
+passwall.5dbjucel.address='kj.wgnmdgfw.com'
+passwall.5dbjucel.remarks='越南-VN-01'
+passwall.5dbjucel.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.5dbjucel.tls_allowInsecure='0'
+passwall.5dbjucel.add_mode='2'
+passwall.odjKUkAU=nodes
+passwall.odjKUkAU.tls='1'
+passwall.odjKUkAU.type='sing-box'
+passwall.odjKUkAU.timeout='60'
+passwall.odjKUkAU.tcp_guise='none'
+passwall.odjKUkAU.add_from='ikuajing'
+passwall.odjKUkAU.protocol='trojan'
+passwall.odjKUkAU.tls_serverName='eplcgame.com'
+passwall.odjKUkAU.port='34602'
+passwall.odjKUkAU.transport='tcp'
+passwall.odjKUkAU.address='kj.wgnmdgfw.com'
+passwall.odjKUkAU.remarks='越南-VN-02'
+passwall.odjKUkAU.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.odjKUkAU.tls_allowInsecure='0'
+passwall.odjKUkAU.add_mode='2'
+passwall.Eu8CVwIf=nodes
+passwall.Eu8CVwIf.tls='1'
+passwall.Eu8CVwIf.type='sing-box'
+passwall.Eu8CVwIf.timeout='60'
+passwall.Eu8CVwIf.tcp_guise='none'
+passwall.Eu8CVwIf.add_from='ikuajing'
+passwall.Eu8CVwIf.protocol='trojan'
+passwall.Eu8CVwIf.tls_serverName='eplcgame.com'
+passwall.Eu8CVwIf.port='34622'
+passwall.Eu8CVwIf.transport='tcp'
+passwall.Eu8CVwIf.address='kj.wgnmdgfw.com'
+passwall.Eu8CVwIf.remarks='阿联酋-AE-01'
+passwall.Eu8CVwIf.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.Eu8CVwIf.tls_allowInsecure='0'
+passwall.Eu8CVwIf.add_mode='2'
+passwall.dx5jdVYB=nodes
+passwall.dx5jdVYB.tls='1'
+passwall.dx5jdVYB.type='sing-box'
+passwall.dx5jdVYB.timeout='60'
+passwall.dx5jdVYB.tcp_guise='none'
+passwall.dx5jdVYB.add_from='ikuajing'
+passwall.dx5jdVYB.protocol='trojan'
+passwall.dx5jdVYB.tls_serverName='eplcgame.com'
+passwall.dx5jdVYB.port='34638'
+passwall.dx5jdVYB.transport='tcp'
+passwall.dx5jdVYB.address='kj.wgnmdgfw.com'
+passwall.dx5jdVYB.remarks='阿联酋-AE-02'
+passwall.dx5jdVYB.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.dx5jdVYB.tls_allowInsecure='0'
+passwall.dx5jdVYB.add_mode='2'
+passwall.ycU8X0d0=nodes
+passwall.ycU8X0d0.tls='1'
+passwall.ycU8X0d0.type='sing-box'
+passwall.ycU8X0d0.timeout='60'
+passwall.ycU8X0d0.tcp_guise='none'
+passwall.ycU8X0d0.add_from='ikuajing'
+passwall.ycU8X0d0.protocol='trojan'
+passwall.ycU8X0d0.tls_serverName='eplcgame.com'
+passwall.ycU8X0d0.port='34623'
+passwall.ycU8X0d0.transport='tcp'
+passwall.ycU8X0d0.address='kj.wgnmdgfw.com'
+passwall.ycU8X0d0.remarks='韩国-KR-01'
+passwall.ycU8X0d0.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.ycU8X0d0.tls_allowInsecure='0'
+passwall.ycU8X0d0.add_mode='2'
+passwall.IBCYrkDE=nodes
+passwall.IBCYrkDE.tls='1'
+passwall.IBCYrkDE.type='sing-box'
+passwall.IBCYrkDE.timeout='60'
+passwall.IBCYrkDE.tcp_guise='none'
+passwall.IBCYrkDE.add_from='ikuajing'
+passwall.IBCYrkDE.protocol='trojan'
+passwall.IBCYrkDE.tls_serverName='eplcgame.com'
+passwall.IBCYrkDE.port='34624'
+passwall.IBCYrkDE.transport='tcp'
+passwall.IBCYrkDE.address='kj.wgnmdgfw.com'
+passwall.IBCYrkDE.remarks='韩国-KR-02'
+passwall.IBCYrkDE.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.IBCYrkDE.tls_allowInsecure='0'
+passwall.IBCYrkDE.add_mode='2'
+passwall.0zMos1eM=nodes
+passwall.0zMos1eM.tls='1'
+passwall.0zMos1eM.type='sing-box'
+passwall.0zMos1eM.timeout='60'
+passwall.0zMos1eM.tcp_guise='none'
+passwall.0zMos1eM.add_from='ikuajing'
+passwall.0zMos1eM.protocol='trojan'
+passwall.0zMos1eM.tls_serverName='eplcgame.com'
+passwall.0zMos1eM.port='34628'
+passwall.0zMos1eM.transport='tcp'
+passwall.0zMos1eM.address='kj.wgnmdgfw.com'
+passwall.0zMos1eM.remarks='香港-HK-01'
+passwall.0zMos1eM.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.0zMos1eM.tls_allowInsecure='0'
+passwall.0zMos1eM.add_mode='2'
+passwall.kapVrezt=nodes
+passwall.kapVrezt.tls='1'
+passwall.kapVrezt.type='sing-box'
+passwall.kapVrezt.timeout='60'
+passwall.kapVrezt.tcp_guise='none'
+passwall.kapVrezt.add_from='ikuajing'
+passwall.kapVrezt.protocol='trojan'
+passwall.kapVrezt.tls_serverName='eplcgame.com'
+passwall.kapVrezt.port='34626'
+passwall.kapVrezt.transport='tcp'
+passwall.kapVrezt.address='kj.wgnmdgfw.com'
+passwall.kapVrezt.remarks='香港-HK-02'
+passwall.kapVrezt.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.kapVrezt.tls_allowInsecure='0'
+passwall.kapVrezt.add_mode='2'
+passwall.9lGwtR0R=nodes
+passwall.9lGwtR0R.tls='1'
+passwall.9lGwtR0R.type='sing-box'
+passwall.9lGwtR0R.timeout='60'
+passwall.9lGwtR0R.tcp_guise='none'
+passwall.9lGwtR0R.add_from='ikuajing'
+passwall.9lGwtR0R.protocol='trojan'
+passwall.9lGwtR0R.tls_serverName='eplcgame.com'
+passwall.9lGwtR0R.port='34627'
+passwall.9lGwtR0R.transport='tcp'
+passwall.9lGwtR0R.address='kj.wgnmdgfw.com'
+passwall.9lGwtR0R.remarks='香港-HK-03'
+passwall.9lGwtR0R.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.9lGwtR0R.tls_allowInsecure='0'
+passwall.9lGwtR0R.add_mode='2'
+passwall.rbdjkSOf=nodes
+passwall.rbdjkSOf.tls='1'
+passwall.rbdjkSOf.type='sing-box'
+passwall.rbdjkSOf.timeout='60'
+passwall.rbdjkSOf.tcp_guise='none'
+passwall.rbdjkSOf.add_from='ikuajing'
+passwall.rbdjkSOf.protocol='trojan'
+passwall.rbdjkSOf.tls_serverName='eplcgame.com'
+passwall.rbdjkSOf.port='34625'
+passwall.rbdjkSOf.transport='tcp'
+passwall.rbdjkSOf.address='kj.wgnmdgfw.com'
+passwall.rbdjkSOf.remarks='香港-HK-04'
+passwall.rbdjkSOf.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.rbdjkSOf.tls_allowInsecure='0'
+passwall.rbdjkSOf.add_mode='2'
+passwall.cwIlck53=nodes
+passwall.cwIlck53.tls='1'
+passwall.cwIlck53.type='sing-box'
+passwall.cwIlck53.timeout='60'
+passwall.cwIlck53.tcp_guise='none'
+passwall.cwIlck53.add_from='ikuajing'
+passwall.cwIlck53.protocol='trojan'
+passwall.cwIlck53.tls_serverName='eplcgame.com'
+passwall.cwIlck53.port='34635'
+passwall.cwIlck53.transport='tcp'
+passwall.cwIlck53.address='kj.wgnmdgfw.com'
+passwall.cwIlck53.remarks='香港-HK-05'
+passwall.cwIlck53.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.cwIlck53.tls_allowInsecure='0'
+passwall.cwIlck53.add_mode='2'
+passwall.l95vDNhx=nodes
+passwall.l95vDNhx.tls='1'
+passwall.l95vDNhx.type='sing-box'
+passwall.l95vDNhx.timeout='60'
+passwall.l95vDNhx.tcp_guise='none'
+passwall.l95vDNhx.add_from='ikuajing'
+passwall.l95vDNhx.protocol='trojan'
+passwall.l95vDNhx.tls_serverName='eplcgame.com'
+passwall.l95vDNhx.port='34629'
+passwall.l95vDNhx.transport='tcp'
+passwall.l95vDNhx.address='kj.wgnmdgfw.com'
+passwall.l95vDNhx.remarks='马来西亚-MY-01'
+passwall.l95vDNhx.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.l95vDNhx.tls_allowInsecure='0'
+passwall.l95vDNhx.add_mode='2'
+passwall.IbSKlbTI=nodes
+passwall.IbSKlbTI.tls='1'
+passwall.IbSKlbTI.type='sing-box'
+passwall.IbSKlbTI.timeout='60'
+passwall.IbSKlbTI.tcp_guise='none'
+passwall.IbSKlbTI.add_from='ikuajing'
+passwall.IbSKlbTI.protocol='trojan'
+passwall.IbSKlbTI.tls_serverName='eplcgame.com'
+passwall.IbSKlbTI.port='34643'
+passwall.IbSKlbTI.transport='tcp'
+passwall.IbSKlbTI.address='sg.wgnmdgfw.com'
+passwall.IbSKlbTI.remarks='马来西亚-MY-02'
+passwall.IbSKlbTI.password='74bf1f5a-42bd-304f-b096-34976689243d'
+passwall.IbSKlbTI.tls_allowInsecure='0'
+passwall.IbSKlbTI.add_mode='2'
+passwall_server.global=global
+passwall_server.global.enable='0'
+qbittorrent.config=qbittorrent
+qbittorrent.config.enabled='0'
+qbittorrent.config.port='8080'
+qbittorrent.config.profile_dir='/etc/qbittorrent'
+radius.@radius[0]=radius
+radius.@radius[0].disabled='1'
+radius.@radius[0].ca_cert='/etc/radius/ca.pem'
+radius.@radius[0].cert='/etc/radius/cert.pem'
+radius.@radius[0].key='/etc/radius/key.pem'
+radius.@radius[0].users='/etc/radius/users'
+radius.@radius[0].clients='/etc/radius/clients'
+radius.@radius[0].auth_port='1812'
+radius.@radius[0].acct_port='1813'
+rpcd.@rpcd[0]=rpcd
+rpcd.@rpcd[0].socket='/var/run/ubus/ubus.sock'
+rpcd.@rpcd[0].timeout='60'
+rpcd.@login[0]=login
+rpcd.@login[0].username='root'
+rpcd.@login[0].password='$p$root'
+rpcd.@login[0].read='*'
+rpcd.@login[0].write='*'
+samba4.@samba[0]=samba
+samba4.@samba[0].workgroup='WORKGROUP'
+samba4.@samba[0].charset='UTF-8'
+samba4.@samba[0].description='Samba on OpenWRT'
+shadowsocks-libev.@ss_local[0]=ss_local
+shadowsocks-libev.@ss_local[0].disabled='1'
+shadowsocks-libev.@ss_local[0].server='sss0'
+shadowsocks-libev.@ss_local[0].local_address='0.0.0.0'
+shadowsocks-libev.@ss_local[0].local_port='1080'
+shadowsocks-libev.@ss_local[0].timeout='30'
+shadowsocks-libev.@ss_tunnel[0]=ss_tunnel
+shadowsocks-libev.@ss_tunnel[0].disabled='1'
+shadowsocks-libev.@ss_tunnel[0].server='sss0'
+shadowsocks-libev.@ss_tunnel[0].local_address='0.0.0.0'
+shadowsocks-libev.@ss_tunnel[0].local_port='1090'
+shadowsocks-libev.@ss_tunnel[0].tunnel_address='example.com:80'
+shadowsocks-libev.@ss_tunnel[0].mode='tcp_and_udp'
+shadowsocks-libev.@ss_tunnel[0].timeout='60'
+shadowsocks-libev.hi=ss_redir
+shadowsocks-libev.hi.disabled='1'
+shadowsocks-libev.hi.server='sss0'
+shadowsocks-libev.hi.local_address='0.0.0.0'
+shadowsocks-libev.hi.local_port='1100'
+shadowsocks-libev.hi.mode='tcp_and_udp'
+shadowsocks-libev.hi.timeout='60'
+shadowsocks-libev.hi.fast_open='1'
+shadowsocks-libev.hi.verbose='1'
+shadowsocks-libev.hi.reuse_port='1'
+shadowsocks-libev.hj=ss_redir
+shadowsocks-libev.hj.disabled='1'
+shadowsocks-libev.hj.server='sss0'
+shadowsocks-libev.hj.local_address='0.0.0.0'
+shadowsocks-libev.hj.local_port='1100'
+shadowsocks-libev.hj.mode='tcp_and_udp'
+shadowsocks-libev.hj.timeout='60'
+shadowsocks-libev.hj.fast_open='1'
+shadowsocks-libev.hj.verbose='1'
+shadowsocks-libev.hj.reuse_port='1'
+shadowsocks-libev.ss_rules=ss_rules
+shadowsocks-libev.ss_rules.disabled='1'
+shadowsocks-libev.ss_rules.redir_tcp='hi'
+shadowsocks-libev.ss_rules.redir_udp='hi'
+shadowsocks-libev.ss_rules.src_default='checkdst'
+shadowsocks-libev.ss_rules.dst_default='bypass'
+shadowsocks-libev.ss_rules.local_default='checkdst'
+shadowsocks-libev.ss_rules.src_ips_forward='192.168.1.4'
+shadowsocks-libev.ss_rules.dst_ips_forward='8.8.8.8'
+shadowsocks-libev.sss0=server
+shadowsocks-libev.sss0.disabled='1'
+shadowsocks-libev.sss0.server='192.168.1.3'
+shadowsocks-libev.sss0.server_port='9001'
+shadowsocks-libev.sss0.password='********'
+shadowsocks-libev.sss0.method='aes-256-cfb'
+shadowsocks-libev.@ss_server[0]=ss_server
+shadowsocks-libev.@ss_server[0].disabled='1'
+shadowsocks-libev.@ss_server[0].server_port='9001'
+shadowsocks-libev.@ss_server[0].password='********'
+shadowsocks-libev.@ss_server[0].method='aes-256-cfb'
+sing-box.main=sing-box
+sing-box.main.enabled='0'
+sing-box.main.user='root'
+sing-box.main.conffile='/etc/sing-box/config.json'
+sing-box.main.workdir='/usr/share/sing-box'
+sing-box.main.log_stderr='1'
+sing-box.main.log_stdout='0'
+socat.http=socat
+socat.http.enable='0'
+socat.http.SocatOptions='-d -d TCP6-LISTEN:8000,fork TCP4:192.168.1.20:80'
+socat.http.user='nobody'
+socat.global=global
+socat.global.enable='0'
+sqm.eth1=queue
+sqm.eth1.enabled='0'
+sqm.eth1.interface='eth1'
+sqm.eth1.download='85000'
+sqm.eth1.upload='10000'
+sqm.eth1.qdisc='cake'
+sqm.eth1.script='piece_of_cake.qos'
+sqm.eth1.qdisc_advanced='0'
+sqm.eth1.ingress_ecn='ECN'
+sqm.eth1.egress_ecn='ECN'
+sqm.eth1.qdisc_really_really_advanced='0'
+sqm.eth1.itarget='auto'
+sqm.eth1.etarget='auto'
+sqm.eth1.linklayer='none'
+system.@system[0]=system
+system.@system[0].hostname='OpenWrt'
+system.@system[0].timezone='CST-8'
+system.@system[0].ttylogin='0'
+system.@system[0].log_size='128'
+system.@system[0].urandom_seed='0'
+system.@system[0].zonename='Asia/Shanghai'
+system.@system[0].conloglevel='1'
+system.@system[0].cronloglevel='9'
+system.@system[0].zram_size_mb='495'
+system.@system[0].zram_comp_algo='lz4'
+system.ntp=timeserver
+system.ntp.enabled='1'
+system.ntp.enable_server='0'
+system.ntp.server='ntp1.aliyun.com' 'ntp2.aliyun.com' 'time1.cloud.tencent.com' 'time2.cloud.tencent.com'
+ttyd.@ttyd[0]=ttyd
+ttyd.@ttyd[0].interface='@lan'
+ttyd.@ttyd[0].command='/bin/login'
+upnpd.config=upnpd
+upnpd.config.enabled='0'
+upnpd.config.enable_natpmp='1'
+upnpd.config.enable_upnp='1'
+upnpd.config.ext_allow_private_ipv4='1'
+upnpd.config.secure_mode='1'
+upnpd.config.log_output='0'
+upnpd.config.download='1024'
+upnpd.config.upload='512'
+upnpd.config.internal_iface='lan'
+upnpd.config.port='5000'
+upnpd.config.upnp_lease_file='/var/run/miniupnpd.leases'
+upnpd.config.igdv1='1'
+upnpd.config.presentation_url='http://10.0.0.1/'
+upnpd.@perm_rule[0]=perm_rule
+upnpd.@perm_rule[0].action='allow'
+upnpd.@perm_rule[0].ext_ports='1024-65535'
+upnpd.@perm_rule[0].int_addr='0.0.0.0/0'
+upnpd.@perm_rule[0].int_ports='1024-65535'
+upnpd.@perm_rule[0].comment='Allow high ports'
+upnpd.@perm_rule[1]=perm_rule
+upnpd.@perm_rule[1].action='deny'
+upnpd.@perm_rule[1].ext_ports='0-65535'
+upnpd.@perm_rule[1].int_addr='0.0.0.0/0'
+upnpd.@perm_rule[1].int_ports='0-65535'
+upnpd.@perm_rule[1].comment='Default deny'
+vlmcsd.config=vlmcsd
+vlmcsd.config.enabled='0'
+vlmcsd.config.autoactivate='0'
+webdav.config=webdav
+webdav.config.allow_wan='0'
+webdav.config.enable='0'
+webdav.config.listen_port='5005'
+webdav.config.root_dir='/mnt'
+webdav.config.ssl='0'
+zerotier.global=zerotier
+zerotier.global.enabled='0'
+zerotier.earth=network
+zerotier.earth.id='8056c2e21c000001'
+zerotier.earth.allow_managed='1'
+zerotier.earth.allow_global='0'
+zerotier.earth.allow_default='0'
+zerotier.earth.allow_dns='0'
+zerotier.sample_config=zerotier
+zerotier.sample_config.enabled='0'
+
+
+【2/3】OpenClash LuCI 界面设置：
+
+[root@OpenWrt ~]# cat /etc/config/openclash
+
+config openclash 'config'
+        option proxy_port '7892'
+        option tproxy_port '7895'
+        option mixed_port '7893'
+        option socks_port '7891'
+        option http_port '7890'
+        option dns_port '7874'
+        option enable '1'
+        option update '0'
+        option en_mode 'fake-ip-tun'
+        option auto_update '0'
+        option auto_update_time '0'
+        option cn_port '9090'
+        option dashboard_forward_ssl '0'
+        option rule_source '0'
+        option enable_custom_dns '1'
+        option ipv6_enable '1'
+        option ipv6_dns '1'
+        option enable_custom_clash_rules '0'
+        option other_rule_auto_update '1'
+        option core_version 'linux-amd64-v2'
+        option enable_redirect_dns '1'
+        option servers_if_update '0'
+        option disable_masq_cache '1'
+        option servers_update '0'
+        option log_level '0'
+        option proxy_mode 'rule'
+        option intranet_allowed '0'
+        option disable_udp_quic '1'
+        option operation_mode 'fake-ip'
+        option enable_rule_proxy '0'
+        option redirect_dns '1'
+        option cachesize_dns '1'
+        option filter_aaaa_dns '1'
+        option small_flash_memory '0'
+        option interface_name '0'
+        option log_size '1024'
+        option tolerance '50'
+        option store_fakeip '1'
+        option custom_fallback_filter '0'
+        option custom_fakeip_filter '0'
+        option custom_host '0'
+        option custom_name_policy '0'
+        option append_wan_dns '1'
+        option stream_auto_select '0'
+        option bypass_gateway_compatible '0'
+        option github_address_mod '0'
+        option urltest_address_mod '0'
+        option urltest_interval_mod '180'
+        option delay_start '0'
+        option router_self_proxy '1'
+        option release_branch 'dev'
+        option smart_enable '0'
+        option dashboard_type 'Official'
+        option yacd_type 'Meta'
+        option append_default_dns '0'
+        option enable_respect_rules '0'
+        option chnr_custom_url 'https://ispip.clang.cn/all_cn.txt'
+        option chnr6_custom_url 'https://ispip.clang.cn/all_cn_ipv6.txt'
+        option dashboard_password '123456'
+        option default_resolvfile '/tmp/resolv.conf.d/resolv.conf.auto'
+        option config_path '/etc/openclash/config/clash-fallback.yaml'
+        option core_type 'Meta'
+        option dnsmasq_resolvfile '/tmp/resolv.conf.d/resolv.conf.auto'
+        option disable_quic_go_gso '0'
+        option enable_custom_domain_dns_server '0'
+        option skip_proxy_address '1'
+        option china_ip_route '1'
+        option lan_interface_name '0'
+        option geo_auto_update '1'
+        option geoip_auto_update '1'
+        option geosite_auto_update '1'
+        option geoasn_auto_update '1'
+        option chnr_auto_update '1'
+        option chnr_update_week_time '*'
+        option chnr_update_day_time '3'
+        option auto_restart '0'
+        option auto_restart_week_time '1'
+        option auto_restart_day_time '0'
+        option dler_email 'root'
+        option dler_passwd '10050921'
+        option stack_type 'mixed'
+        option geo_update_week_time '*'
+        option geo_update_day_time '3'
+        option geo_custom_url 'https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/lite/Country.mmdb'
+        option geosite_update_week_time '*'
+        option geosite_update_day_time '3'
+        option geosite_custom_url 'https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat'
+        option fakeip_range '198.18.0.1/16'
+        option find_process_mode '0'
+        option global_client_fingerprint '0'
+        option geodata_loader '0'
+        option enable_geoip_dat '0'
+        option enable_meta_sniffer '1'
+        option enable_meta_sniffer_pure_ip '1'
+        option enable_meta_sniffer_custom '0'
+        option auto_smart_switch '0'
+        option smart_collect '0'
+        option lgbm_auto_update '0'
+        option other_rule_update_week_time '*'
+        option other_rule_update_day_time '3'
+        option restart '0'
+        option enable_tcp_concurrent '1'
+        option enable_unified_delay '1'
+        option smart_enable_lgbm '0'
+        option geoip_update_week_time '*'
+        option geoip_update_day_time '3'
+        option geoip_custom_url 'https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat'
+        option geoasn_update_week_time '*'
+        option geoasn_update_day_time '3'
+        option geoasn_custom_url 'https://testingcf.jsdelivr.net/gh/xishang0128/geoip@release/GeoLite2-ASN.mmdb'
+        option ipv6_mode '2'
+        option china_ip6_route '1'
+        option dnsmasq_cachesize '1000'
+        option dnsmasq_filter_aaaa '0'
+
+config dns_servers
+        option type 'udp'
+        option ip '114.114.114.114'
+        option enabled '0'
+        option group 'default'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option type 'udp'
+        option ip '119.29.29.29'
+        option enabled '0'
+        option group 'default'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option group 'nameserver'
+        option type 'udp'
+        option ip '114.114.114.114'
+        option enabled '0'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option type 'udp'
+        option ip '223.5.5.5'
+        option enabled '0'
+        option group 'default'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option group 'nameserver'
+        option type 'udp'
+        option ip '119.29.29.29'
+        option enabled '0'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option group 'nameserver'
+        option type 'udp'
+        option ip '119.28.28.28'
+        option enabled '1'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option group 'nameserver'
+        option type 'udp'
+        option ip '223.5.5.5'
+        option enabled '1'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option type 'tcp'
+        option ip '192.168.3.5'
+        option group 'nameserver'
+        option enabled '0'
+        option disable_ipv6 '0'
+        option port '54'
+
+config dns_servers
+        option type 'https'
+        option ip 'dns.alidns.com/dns-query'
+        option group 'nameserver'
+        option enabled '0'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '1'
+        option group 'fallback'
+        option ip '9.9.9.9'
+        option type 'udp'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip '149.112.112.112'
+        option type 'udp'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip '2620:fe::fe'
+        option type 'udp'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip '2620:fe::9'
+        option type 'udp'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '1'
+        option group 'fallback'
+        option ip '8.8.8.8'
+        option type 'udp'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip '8.8.4.4'
+        option type 'udp'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip '2001:4860:4860::8888'
+        option type 'udp'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip '2001:4860:4860::8844'
+        option type 'udp'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip '2001:da8::666'
+        option type 'udp'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip 'dns.quad9.net'
+        option type 'tls'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip 'dns.google'
+        option type 'tls'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '1'
+        option group 'fallback'
+        option ip '1.1.1.1'
+        option type 'tls'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip 'jp.tiar.app'
+        option type 'tls'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip 'dot.tiar.app'
+        option type 'tls'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip 'dns.quad9.net/dns-query'
+        option type 'https'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip 'dns.google/dns-query'
+        option type 'https'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip 'dns.cloudflare.com/dns-query'
+        option type 'https'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip '1.1.1.1/dns-query'
+        option type 'https'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip 'public.dns.iij.jp/dns-query'
+        option type 'https'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip 'jp.tiar.app/dns-query'
+        option type 'https'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip 'jp.tiarap.org/dns-query'
+        option type 'https'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option type 'https'
+        option ip 'doh.dnslify.com/dns-query'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip 'dns.twnic.tw/dns-query'
+        option type 'https'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip 'dns.oszx.co/dns-query'
+        option type 'https'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip 'doh.applied-privacy.net/query'
+        option type 'https'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip 'dnsforge.de/dns-query'
+        option type 'https'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip 'doh.ffmuc.net/dns-query'
+        option type 'https'
+        option disable_ipv6 '0'
+
+config dns_servers
+        option enabled '0'
+        option group 'fallback'
+        option ip 'doh.mullvad.net/dns-query'
+        option type 'https'
+        option disable_ipv6 '0'
+
+config authentication
+        option enabled '0'
+        option username 'Clash'
+        option password 'AaJEQEX6'
+
+
+
+【3/3】OpenClash 主配置文件（当前运行配置）：
+
+[root@OpenWrt ~]# cat /etc/openclash/clash-fallback.yaml
+---
+proxy-providers:
+  爱跨境:
+    url: https://kuajingnote-api01.trafficmanager.net/link/uSxRqk5h5FCUAwPc?sub=3
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 180
+    proxy: 直连
+    path: "./proxy_provider/爱跨境"
+  飞鸟云:
+    url: https://x3.344211.cc/api/v1/client/subscribe?token=961e8d2c9a6f65b6ded2f37975030943
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 180
+    proxy: 直连
+    path: "./proxy_provider/飞鸟云"
+proxies:
+- name: 直连
+  type: direct
+- name: 拒绝
+  type: reject
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 0.0.0.0:9090
+secret: '123456'
+dns:
+  enable: true
+  listen: 0.0.0.0:7874
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+  - 192.168.0.1
+  - 119.28.28.28
+  - 223.5.5.5
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+  - "+.lan"
+  - "+.local"
+  - geosite:cn
+  - "+.km688.ink"
+  - "+.onesubv.site"
+  - "+.oneyyds.online"
+  - "+.fengyyds.site"
+  - "+.onemg.top"
+  - "+.chybinc.com"
+  - "+.invitevp.com"
+  - "+.vp2.us"
+  - "+.xiaoniuyun.cc"
+  - "+.apple-bing.sbs"
+  - "+.bncrcloud.com"
+  - "+.xby01.xyz"
+  - "+.idsduf.com"
+  - "+.66jc.top"
+  - "+.gfw.gg"
+  - "+.moedog.cloud"
+  - "+.ynhtbank.com"
+  - "+.qeayr.cn"
+  - "+.saojc.xyz"
+  - "+.sssyun.xyz"
+  - "+.dler.cloud"
+  - "+.0tk8a3a1q4t94dler.com"
+  - "+.aerianas.top"
+  - "+.gptacg.top"
+  - "+.wxda.net"
+  fallback:
+  - 9.9.9.9
+  - 8.8.8.8
+  - tls://1.1.1.1
+ipv6: true
+tun:
+  enable: true
+  stack: mixed
+  device: utun
+  dns-hijack:
+  - 127.0.0.1:53
+  endpoint-independent-nat: true
+  auto-route: false
+  auto-detect-interface: false
+  auto-redirect: false
+  strict-route: false
+profile:
+  store-selected: true
+  store-fake-ip: true
+default:
+  type: select
+  proxies: &1
+  - 直连
+  - 所有-自动
+  - 所有-手动
+  - 香港-自动
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 美国-故转
+  - 其他-故转
+  - 拒绝
+proxy-groups:
+- name: AI
+  type: select
+  proxies: *1
+- name: Stream Media
+  type: select
+  proxies: *1
+- name: GitHub
+  type: select
+  proxies: *1
+- name: Reddit
+  type: select
+  proxies: *1
+- name: Nvidia
+  type: select
+  proxies: *1
+- name: Apple
+  type: select
+  proxies: *1
+- name: Microsoft
+  type: select
+  proxies: *1
+- name: Games
+  type: select
+  proxies: *1
+- name: Crypto
+  type: select
+  proxies: *1
+- name: Test
+  type: select
+  proxies: *1
+- name: Block
+  type: select
+  proxies: *1
+- name: 国外
+  type: select
+  proxies: *1
+- name: 国内
+  type: select
+  proxies: *1
+- name: 其他
+  type: select
+  proxies: *1
+- name: 所有-手动
+  type: select
+  include-all: true
+  filter: "^((?!(直连|拒绝)).)*$"
+- name: 所有-自动
+  type: url-test
+  include-all: true
+  tolerance: 50
+  interval: 180
+  filter: "^((?!(直连|拒绝)).)*$"
+- name: 香港-故转
+  type: fallback
+  interval: 180
+  lazy: false
+  proxies:
+  - 香港-手动
+  - 香港-自动
+- name: 香港-手动
+  type: select
+  include-all: true
+  filter: "(?=.*(广港|香港|HK|Hong Kong|\U0001F1ED\U0001F1F0|HongKong)).*$"
+- name: 香港-自动
+  type: url-test
+  include-all: true
+  tolerance: 50
+  interval: 180
+  filter: "(?=.*(广港|香港|HK|Hong Kong|\U0001F1ED\U0001F1F0|HongKong)).*$"
+- name: 台湾-故转
+  type: fallback
+  interval: 180
+  lazy: false
+  proxies:
+  - 台湾-手动
+  - 台湾-自动
+- name: 台湾-手动
+  type: select
+  include-all: true
+  filter: "(?=.*(广台|台湾|台灣|TW|Tai Wan|\U0001F1F9\U0001F1FC|\U0001F1E8\U0001F1F3|TaiWan|Taiwan)).*$"
+- name: 台湾-自动
+  type: url-test
+  include-all: true
+  tolerance: 50
+  interval: 180
+  filter: "(?=.*(广台|台湾|台灣|TW|Tai Wan|\U0001F1F9\U0001F1FC|\U0001F1E8\U0001F1F3|TaiWan|Taiwan)).*$"
+- name: 日本-故转
+  type: fallback
+  interval: 180
+  lazy: false
+  proxies:
+  - 日本-手动
+  - 日本-自动
+- name: 日本-手动
+  type: select
+  include-all: true
+  filter: "(?=.*(广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|\U0001F1EF\U0001F1F5|Japan)).*$"
+- name: 日本-自动
+  type: url-test
+  include-all: true
+  tolerance: 50
+  interval: 180
+  filter: "(?=.*(广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|\U0001F1EF\U0001F1F5|Japan)).*$"
+- name: 新加坡-故转
+  type: fallback
+  interval: 180
+  lazy: false
+  proxies:
+  - 新加坡-手动
+  - 新加坡-自动
+- name: 新加坡-手动
+  type: select
+  include-all: true
+  filter: "(?=.*(广新|新加坡|SG|坡|狮城|\U0001F1F8\U0001F1EC|Singapore)).*$"
+- name: 新加坡-自动
+  type: url-test
+  include-all: true
+  tolerance: 50
+  interval: 180
+  filter: "(?=.*(广新|新加坡|SG|坡|狮城|\U0001F1F8\U0001F1EC|Singapore)).*$"
+- name: 美国-故转
+  type: fallback
+  interval: 180
+  lazy: false
+  proxies:
+  - 美国-手动
+  - 美国-自动
+- name: 美国-手动
+  type: select
+  include-all: true
+  filter: "(?=.*(广美|US|美国|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|洛杉|圣何塞|圣克拉|西雅|芝加|\U0001F1FA\U0001F1F8|United
+    States)).*$"
+- name: 美国-自动
+  type: url-test
+  include-all: true
+  tolerance: 50
+  interval: 180
+  filter: "(?=.*(广美|US|美国|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|洛杉|圣何塞|圣克拉|西雅|芝加|\U0001F1FA\U0001F1F8|United
+    States)).*$"
+- name: 其他-故转
+  type: fallback
+  interval: 180
+  lazy: false
+  proxies:
+  - 其他-手动
+  - 其他-自动
+- name: 其他-手动
+  type: select
+  include-all: true
+  filter: "^((?!(直连|拒绝|广港|香港|HK|Hong Kong|\U0001F1ED\U0001F1F0|HongKong|广台|台湾|台灣|TW|Tai
+    Wan|\U0001F1F9\U0001F1FC|\U0001F1E8\U0001F1F3|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|\U0001F1EF\U0001F1F5|Japan|广新|新加坡|SG|坡|狮城|\U0001F1F8\U0001F1EC|Singapore|广美|US|美国|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|洛杉|圣何塞|圣克拉|西雅|芝加|\U0001F1FA\U0001F1F8|United
+    States)).)*$"
+- name: 其他-自动
+  type: url-test
+  include-all: true
+  tolerance: 50
+  interval: 180
+  filter: "^((?!(直连|拒绝|广港|香港|HK|Hong Kong|\U0001F1ED\U0001F1F0|HongKong|广台|台湾|台灣|TW|Tai
+    Wan|\U0001F1F9\U0001F1FC|\U0001F1E8\U0001F1F3|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|\U0001F1EF\U0001F1F5|Japan|广新|新加坡|SG|坡|狮城|\U0001F1F8\U0001F1EC|Singapore|广美|US|美国|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|洛杉|圣何塞|圣克拉|西雅|芝加|\U0001F1FA\U0001F1F8|United
+    States)).)*$"
+rules:
+- RULE-SET,TEST / Domain,Test
+- RULE-SET,Block / Domain,Block
+- RULE-SET,GitHub / Domain,GitHub
+- RULE-SET,ChatGPT / Domain,AI
+- RULE-SET,Claude / Domain,AI
+- RULE-SET,Copilot / Domain,AI
+- RULE-SET,Gemini / Domain,AI
+- RULE-SET,Groq / Domain,AI
+- RULE-SET,Grok / Domain,AI
+- RULE-SET,Meta AI / Domain,AI
+- RULE-SET,Perplexity / Domain,AI
+- RULE-SET,Microsoft / Domain,Microsoft
+- RULE-SET,Apple / Domain,Apple
+- RULE-SET,Apple-CN / Domain,Apple
+- RULE-SET,Apple-Custome / Domain,Apple
+- RULE-SET,OKX / Domain,Crypto
+- RULE-SET,Bybit / Domain,Crypto
+- RULE-SET,Binance / Domain,Crypto
+- RULE-SET,TikTok / Domain,Stream Media
+- RULE-SET,Netflix / Domain,Stream Media
+- RULE-SET,Netflix / IP,Stream Media,no-resolve
+- RULE-SET,Disney / Domain,Stream Media
+- RULE-SET,Amazon / Domain,Stream Media
+- RULE-SET,HBO / Domain,Stream Media
+- RULE-SET,Crunchyroll / Domain,Stream Media
+- RULE-SET,Popcorn / Domain,Stream Media
+- RULE-SET,Spotify / Domain,Stream Media
+- RULE-SET,Steam / Domain,Games
+- RULE-SET,Epic / Domain,Games
+- RULE-SET,EA / Domain,Games
+- RULE-SET,Blizzard / Domain,Games
+- RULE-SET,UBI / Domain,Games
+- RULE-SET,PlayStation / Domain,Games
+- RULE-SET,Nintend / Domain,Games
+- RULE-SET,Nvidia / Domain,Nvidia
+- RULE-SET,Reddit / Domain,Reddit
+- RULE-SET,Proxy / Domain,国外
+- RULE-SET,Globe / Domain,国外
+- RULE-SET,Direct / Domain,国内
+- RULE-SET,China / Domain,国内
+- RULE-SET,China / IP,国内,no-resolve
+- RULE-SET,Private / Domain,国内
+- MATCH,其他
+rule-anchor:
+  ip:
+    type: http
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+  domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+  class:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+rule-providers:
+  TEST / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Check.list
+    path: "./rule_provider/TEST / Domain"
+  ChatGPT / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs
+    path: "./rule_provider/ChatGPT / Domain"
+  Claude / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Claude/Claude.list
+    path: "./rule_provider/Claude / Domain"
+  Meta AI / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/MetaAi.list
+    path: "./rule_provider/Meta AI / Domain"
+  Perplexity / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/perplexity.mrs
+    path: "./rule_provider/Perplexity / Domain"
+  Copilot / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Copilot.list
+    path: "./rule_provider/Copilot / Domain"
+  Gemini / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Gemini.list
+    path: "./rule_provider/Gemini / Domain"
+  GitHub / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/github.mrs
+    path: "./rule_provider/GitHub / Domain"
+  Amazon / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/amazon.mrs
+    path: "./rule_provider/Amazon / Domain"
+  Apple-CN / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple-cn.mrs
+    path: "./rule_provider/Apple-CN / Domain"
+  Apple / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.mrs
+    path: "./rule_provider/Apple / Domain"
+  Apple-Custome / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Apple.list
+    path: "./rule_provider/Apple-Custome / Domain"
+  Microsoft / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs
+    path: "./rule_provider/Microsoft / Domain"
+  OKX / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/okx.mrs
+    path: "./rule_provider/OKX / Domain"
+  Bybit / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bybit.mrs
+    path: "./rule_provider/Bybit / Domain"
+  Binance / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/binance.mrs
+    path: "./rule_provider/Binance / Domain"
+  TikTok / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tiktok.mrs
+    path: "./rule_provider/TikTok / Domain"
+  Netflix / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/netflix.mrs
+    path: "./rule_provider/Netflix / Domain"
+  Netflix / IP:
+    type: http
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/netflix.mrs
+    path: "./rule_provider/Netflix / IP"
+  Disney / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/disney.mrs
+    path: "./rule_provider/Disney / Domain"
+  HBO / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/hbo.mrs
+    path: "./rule_provider/HBO / Domain"
+  Spotify / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/spotify.mrs
+    path: "./rule_provider/Spotify / Domain"
+  Steam / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/steam.mrs
+    path: "./rule_provider/Steam / Domain"
+  Epic / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.list
+    path: "./rule_provider/Epic / Domain"
+  EA / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/EA/EA.list
+    path: "./rule_provider/EA / Domain"
+  Blizzard / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Blizzard/Blizzard.list
+    path: "./rule_provider/Blizzard / Domain"
+  UBI / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/UBI/UBI.list
+    path: "./rule_provider/UBI / Domain"
+  PlayStation / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PlayStation/PlayStation.list
+    path: "./rule_provider/PlayStation / Domain"
+  Nintend / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Nintendo/Nintendo.list
+    path: "./rule_provider/Nintend / Domain"
+  Proxy / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Proxy.list
+    path: "./rule_provider/Proxy / Domain"
+  Globe / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list
+    path: "./rule_provider/Globe / Domain"
+  Block / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Block.list
+    path: "./rule_provider/Block / Domain"
+  Nvidia / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Nvidia/Nvidia.list
+    path: "./rule_provider/Nvidia / Domain"
+  Crunchyroll / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Crunchyroll.list
+    path: "./rule_provider/Crunchyroll / Domain"
+  Reddit / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/reddit.mrs
+    path: "./rule_provider/Reddit / Domain"
+  Groq / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/groq.mrs
+    path: "./rule_provider/Groq / Domain"
+  Grok / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Grok.list
+    path: "./rule_provider/Grok / Domain"
+  Popcorn / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Popcorn.list
+    path: "./rule_provider/Popcorn / Domain"
+  Direct / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Direct.list
+    path: "./rule_provider/Direct / Domain"
+  Private / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/private.mrs
+    path: "./rule_provider/Private / Domain"
+  China / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs
+    path: "./rule_provider/China / Domain"
+  China / IP:
+    type: http
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/cn.mrs
+    path: "./rule_provider/China / IP"
+bind-address: "*"
+external-ui: "/usr/share/openclash/ui"
+external-ui-name: metacubexd
+keep-alive-interval: 15
+keep-alive-idle: 600
+tcp-concurrent: true
+unified-delay: true
+geox-url:
+  mmdb: https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/lite/Country.mmdb
+  geoip: https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat
+  geosite: https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat
+  asn: https://testingcf.jsdelivr.net/gh/xishang0128/geoip@release/GeoLite2-ASN.mmdb
+sniffer:
+  enable: true
+  override-destination: true
+  sniff:
+    QUIC:
+      ports:
+      - 443
+    TLS:
+      ports:
+      - 443
+      - 8443
+    HTTP:
+      ports:
+      - 80
+      - 8080-8880
+      override-destination: true
+  force-domain:
+  - "+.netflix.com"
+  - "+.nflxvideo.net"
+  - "+.amazonaws.com"
+  - "+.media.dssott.com"
+  skip-domain:
+  - "+.apple.com"
+  - Mijia Cloud
+  - dlg.io.mi.com
+  - "+.oray.com"
+  - "+.sunlogin.net"
+  - "+.push.apple.com"
+  parse-pure-ip: true
+
+
+
